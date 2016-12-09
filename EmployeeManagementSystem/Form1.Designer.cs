@@ -1,6 +1,6 @@
 ﻿namespace EmployeeManagementSystem
 {
-    partial class Form1
+    partial class EmployeeDetails
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.EmployeeDetailsRecord = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeDetailsRecord)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // EmployeeDetailsRecord
+            // 
+            this.EmployeeDetailsRecord.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.EmployeeDetailsRecord.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EmployeeDetailsRecord.Location = new System.Drawing.Point(12, 12);
+            this.EmployeeDetailsRecord.Name = "EmployeeDetailsRecord";
+            this.EmployeeDetailsRecord.Size = new System.Drawing.Size(1168, 512);
+            this.EmployeeDetailsRecord.TabIndex = 0;
+            // 
+            // EmployeeDetails
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(1192, 536);
+            this.Controls.Add(this.EmployeeDetailsRecord);
+            this.Name = "EmployeeDetails";
+            this.Text = "Employee Details";
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeDetailsRecord)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView EmployeeDetailsRecord;
     }
 }
 
