@@ -50,5 +50,31 @@ namespace EmployeeManagementSystem
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void EmployeeManagementSystem_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void contentPanel_Paint(object sender, PaintEventArgs e)
+        {
+            contentPanel.Controls.Add(EmployeeDetails.Instance);
+            EmployeeDetails.Instance.Dock = DockStyle.Fill;
+            EmployeeDetails.Instance.BringToFront();
+        }
+
+        private void employeeDetailsButton_Click(object sender, EventArgs e)
+        {
+            contentPanel.Controls.Add(EmployeeDetails.Instance);
+            EmployeeDetails.Instance.Dock = DockStyle.Fill;
+            EmployeeDetails.Instance.BringToFront();
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            contentPanel.Controls.Add(AddEmployee.Instance);
+            AddEmployee.Instance.Dock = DockStyle.Fill;
+            AddEmployee.Instance.BringToFront();
+        }
     }
 }
