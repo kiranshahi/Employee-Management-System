@@ -15,6 +15,7 @@ namespace EmployeeManagementSystem1
         private int row;
 
         List<GeneratePayRoll> payrollList = new List<GeneratePayRoll>();
+        List<ChartItem> itemList = new List<ChartItem>();
 
         //DataGridView myDataGridView = new DataGridView();
         //DataTable myDataTable = new DataTable();
@@ -32,7 +33,7 @@ namespace EmployeeManagementSystem1
                                      MessageBoxButtons.OKCancel,
                                      MessageBoxIcon.Question);
             if (result == DialogResult.OK)
-                Environment.Exit(0);
+                this.Close();
         }
 
         private void lblMinimize_Click(object sender, EventArgs e)
@@ -60,12 +61,6 @@ namespace EmployeeManagementSystem1
             _dragging = false;
         }
 
-        private void employeeDetails_Click(object sender, EventArgs e)
-        {
-            containerPanel.Controls.Add(panel1);
-            panel1.Dock = DockStyle.Fill;
-            panel1.BringToFront();
-        }
 
         private void addEmployee_Click(object sender, EventArgs e)
         {
@@ -242,14 +237,12 @@ namespace EmployeeManagementSystem1
 
         private void payroll_Click(object sender, EventArgs e)
         {
-            //GeneratePayRoll generatePayRoll = new GeneratePayRoll();
-            //generatePayRoll.ShowDialog();
             GeneratePayroll();
         }
 
         public void GeneratePayroll()
         {
-            List<CalculateTotalWage> list = new List<CalculateTotalWage>();
+            List<CalculateTotalWage> wageDetailsList = new List<CalculateTotalWage>();
             try
             {
                 for (int i = 0; i < dataGridView.Rows.Count - 1; i++)
@@ -258,17 +251,38 @@ namespace EmployeeManagementSystem1
                     string department = dataGridView.Rows[i].Cells[6].Value.ToString();
                     int wageRate = Int32.Parse(dataGridView.Rows[i].Cells[8].Value.ToString());
                     int workedHour = Int32.Parse(dataGridView.Rows[i].Cells[9].Value.ToString());
-                    //dataGridView.Rows[i].Cells[10].Value = wageRate * workedHour;
-                    list.Add(new CalculateTotalWage(name, department, wageRate, workedHour));
 
-                    //salaryList = dataGridView.Rows[i].Cells[10].Value;
-                    //return wageRate;
+                    wageDetailsList.Add(new CalculateTotalWage(name, department, wageRate, workedHour));
                 }
-                //MessageBox.Show(list.Count.ToString());
-                GeneratePayRoll report = new GeneratePayRoll(list);
-                report.ShowDialog();
+                GeneratePayRoll generatePayroll = new GeneratePayRoll(wageDetailsList);
+                generatePayroll.ShowDialog();
             }
 
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnGenerateReport_Click(object sender, EventArgs e)
+        {
+            GenerateChartDetails();
+        }
+        public void GenerateChartDetails()
+        {
+            List<ChartItem> itemList = new List<ChartItem>();
+            try
+            {
+                for (int i = 0; i < dataGridView.Rows.Count - 1; i++)
+                {
+                    string department = dataGridView.Rows[i].Cells[1].Value.ToString();
+                    int totalWage = Int32.Parse(dataGridView.Rows[i].Cells[8].Value.ToString());
+
+                    itemList.Add(new ChartItem(department, totalWage));
+                }
+                DisplayChart generatePayroll = new DisplayChart(itemList);
+                generatePayroll.ShowDialog();
+            }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message, "Error !", MessageBoxButtons.OK, MessageBoxIcon.Error);

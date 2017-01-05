@@ -30,14 +30,14 @@
         {
             this.payrollPanel = new System.Windows.Forms.Panel();
             this.payrollDataGridView = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblClose = new System.Windows.Forms.Label();
-            this.header = new System.Windows.Forms.Label();
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Department = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WageRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WorkedHour = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalWage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblClose = new System.Windows.Forms.Label();
+            this.header = new System.Windows.Forms.Label();
             this.payrollPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.payrollDataGridView)).BeginInit();
             this.panel1.SuspendLayout();
@@ -64,8 +64,34 @@
             this.payrollDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.payrollDataGridView.Location = new System.Drawing.Point(0, 0);
             this.payrollDataGridView.Name = "payrollDataGridView";
+            this.payrollDataGridView.RowHeadersVisible = false;
             this.payrollDataGridView.Size = new System.Drawing.Size(1046, 444);
             this.payrollDataGridView.TabIndex = 0;
+            // 
+            // Name
+            // 
+            this.Name.HeaderText = "Name";
+            this.Name.Name = "Name";
+            // 
+            // Department
+            // 
+            this.Department.HeaderText = "Department";
+            this.Department.Name = "Department";
+            // 
+            // WageRate
+            // 
+            this.WageRate.HeaderText = "Wage Rate";
+            this.WageRate.Name = "WageRate";
+            // 
+            // WorkedHour
+            // 
+            this.WorkedHour.HeaderText = "Worked Hour";
+            this.WorkedHour.Name = "WorkedHour";
+            // 
+            // TotalWage
+            // 
+            this.TotalWage.HeaderText = "TotalWage";
+            this.TotalWage.Name = "TotalWage";
             // 
             // panel1
             // 
@@ -101,31 +127,6 @@
             this.header.Text = "Employee Payroll Details";
             this.header.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // Name
-            // 
-            this.Name.HeaderText = "Name";
-            this.Name.Name = "Name";
-            // 
-            // Department
-            // 
-            this.Department.HeaderText = "Department";
-            this.Department.Name = "Department";
-            // 
-            // WageRate
-            // 
-            this.WageRate.HeaderText = "Wage Rate";
-            this.WageRate.Name = "WageRate";
-            // 
-            // WorkedHour
-            // 
-            this.WorkedHour.HeaderText = "Worked Hour";
-            this.WorkedHour.Name = "WorkedHour";
-            // 
-            // TotalWage
-            // 
-            this.TotalWage.HeaderText = "TotalWage";
-            this.TotalWage.Name = "TotalWage";
-            // 
             // GeneratePayRoll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -134,6 +135,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.payrollPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            //this.Name = "GeneratePayRoll";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GeneratePayRoll";
             this.payrollPanel.ResumeLayout(false);

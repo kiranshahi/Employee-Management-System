@@ -13,6 +13,7 @@ namespace EmployeeManagementSystem1
      partial class GeneratePayRoll : Form
      {
         private List<CalculateTotalWage> list;
+
         public GeneratePayRoll(List<CalculateTotalWage> list)
         {
             InitializeComponent();
@@ -32,9 +33,14 @@ namespace EmployeeManagementSystem1
          {
                 foreach (CalculateTotalWage emloyeeList in list)
                 {
-                    payrollDataGridView.Rows.Add(emloyeeList);
+                    int row = payrollDataGridView.Rows.Count - 1;
+                    payrollDataGridView.Rows.Add();
+                    payrollDataGridView.Rows[row].Cells[0].Value = (emloyeeList.EmpName);
+                    payrollDataGridView.Rows[row].Cells[1].Value = (emloyeeList.EmpDepartment);
+                    payrollDataGridView.Rows[row].Cells[2].Value = (emloyeeList.EmpWageRate);
+                    payrollDataGridView.Rows[row].Cells[3].Value = (emloyeeList.EmpWorkedHours);
+                    payrollDataGridView.Rows[row].Cells[4].Value = (emloyeeList.EmpTotalWage);
                 }
          }
-
     }
 }

@@ -72,9 +72,10 @@
             // 
             this.dateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker.Location = new System.Drawing.Point(37, 410);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(277, 26);
+            this.dateTimePicker.Size = new System.Drawing.Size(192, 26);
             this.dateTimePicker.TabIndex = 48;
             this.dateTimePicker.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBoxDepartment_MouseDown);
             this.dateTimePicker.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseMove);
