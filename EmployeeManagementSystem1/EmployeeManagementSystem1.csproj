@@ -46,12 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddEmplpoyee.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="AddEmployee.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddEmplpoyee.Designer.cs">
-      <DependentUpon>AddEmplpoyee.cs</DependentUpon>
+    <Compile Include="AddEmployee.Designer.cs">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="CalculateTotalWage.cs" />
     <Compile Include="EmployeeDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,14 +60,23 @@
       <DependentUpon>EmployeeDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Employees.cs" />
+    <Compile Include="GeneratePayRoll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneratePayRoll.Designer.cs">
+      <DependentUpon>GeneratePayRoll.cs</DependentUpon>
+    </Compile>
     <Compile Include="IdentityEventArgs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddEmplpoyee.resx">
-      <DependentUpon>AddEmplpoyee.cs</DependentUpon>
+    <EmbeddedResource Include="AddEmployee.resx">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeDetails.resx">
       <DependentUpon>EmployeeDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneratePayRoll.resx">
+      <DependentUpon>GeneratePayRoll.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
