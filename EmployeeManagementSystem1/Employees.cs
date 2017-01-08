@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EmployeeManagementSystem1
+﻿namespace EmployeeManagementSystem1
 {
+    /********
+     * 
+     * This class contains the properties of employee.
+     * 
+     * ******/
     public class Employees
     {
         public string Id { get; set; }

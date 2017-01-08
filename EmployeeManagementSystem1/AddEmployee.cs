@@ -1,22 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace EmployeeManagementSystem1
 {
+    /***********
+     * *
+     * *
+     * *This class will add and edit employee details.
+     * *
+     * * 
+     * ***********/
+
+
     public partial class AddEmployee : Form
     {
         private bool _dragging = false;
         private Point _start_point = new Point(0, 0);
 
+        //Delegate has been added
         public delegate void IdentityHandler(object sender, IdentityEventArgs e);
 
+        
+        //Event of the delegate type has been added. i.e. Oject of delegate created
         public event IdentityHandler IdentityUpdated;
 
         public AddEmployee()
@@ -29,7 +35,9 @@ namespace EmployeeManagementSystem1
             comboBoxDepartment.Items.Add("IT");
             comboBoxDepartment.SelectedIndex = 0;
         }
-        public void loadData(string id, string name, string address, string contact, string email, string desigination,
+
+        //This method will set the values on controls received from the selected row.
+        public void LoadData(string id, string name, string address, string contact, string email, string desigination,
            string department, string dateOfJoin, string wageRate, string workedHour)
         {
             txtIdNo.Text = id;
@@ -48,13 +56,13 @@ namespace EmployeeManagementSystem1
             this.Close();
         }
 
-        private void comboBoxDepartment_MouseDown(object sender, MouseEventArgs e)
+        private void OnMouseDown(object sender, MouseEventArgs e)
         {
             _dragging = true;
             _start_point = new Point(e.X, e.Y);
         }
 
-        private void AddEmployee_MouseMove(object sender, MouseEventArgs e)
+        private void OnMouseMove(object sender, MouseEventArgs e)
         {
             if (_dragging)
             {
@@ -63,7 +71,7 @@ namespace EmployeeManagementSystem1
             }
         }
 
-        private void AddEmployee_MouseUp(object sender, MouseEventArgs e)
+        private void OnMouseUp(object sender, MouseEventArgs e)
         {
             _dragging = false;
         }
@@ -86,8 +94,11 @@ namespace EmployeeManagementSystem1
             string wageRate = txtWage.Text;
             string hourWorked = txtWorkedHour.Text;
 
+
+            //intance event args and value has been passed 
             IdentityEventArgs args = new IdentityEventArgs(id, name, address, contactNo, email, desigination, department, dateOfJoin, wageRate, hourWorked);
 
+            //Event has be raised with update arguments of delegate
             IdentityUpdated(this, args);
 
             this.Hide();

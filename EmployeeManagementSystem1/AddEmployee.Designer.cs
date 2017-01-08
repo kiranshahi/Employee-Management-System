@@ -64,9 +64,9 @@
             this.comboBoxDepartment.Name = "comboBoxDepartment";
             this.comboBoxDepartment.Size = new System.Drawing.Size(280, 33);
             this.comboBoxDepartment.TabIndex = 49;
-            this.comboBoxDepartment.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBoxDepartment_MouseDown);
-            this.comboBoxDepartment.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseMove);
-            this.comboBoxDepartment.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseUp);
+            this.comboBoxDepartment.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.comboBoxDepartment.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.comboBoxDepartment.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // dateTimePicker
             // 
@@ -77,9 +77,9 @@
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(192, 26);
             this.dateTimePicker.TabIndex = 48;
-            this.dateTimePicker.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBoxDepartment_MouseDown);
-            this.dateTimePicker.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseMove);
-            this.dateTimePicker.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseUp);
+            this.dateTimePicker.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.dateTimePicker.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.dateTimePicker.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // txtDesignation
             // 
@@ -90,9 +90,9 @@
             this.txtDesignation.Name = "txtDesignation";
             this.txtDesignation.Size = new System.Drawing.Size(280, 31);
             this.txtDesignation.TabIndex = 47;
-            this.txtDesignation.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBoxDepartment_MouseDown);
-            this.txtDesignation.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseMove);
-            this.txtDesignation.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseUp);
+            this.txtDesignation.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.txtDesignation.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.txtDesignation.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // txtAddress
             // 
@@ -103,9 +103,9 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(280, 31);
             this.txtAddress.TabIndex = 46;
-            this.txtAddress.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBoxDepartment_MouseDown);
-            this.txtAddress.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseMove);
-            this.txtAddress.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseUp);
+            this.txtAddress.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.txtAddress.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.txtAddress.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // txtWorkedHour
             // 
@@ -116,9 +116,9 @@
             this.txtWorkedHour.Name = "txtWorkedHour";
             this.txtWorkedHour.Size = new System.Drawing.Size(280, 31);
             this.txtWorkedHour.TabIndex = 45;
-            this.txtWorkedHour.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBoxDepartment_MouseDown);
-            this.txtWorkedHour.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseMove);
-            this.txtWorkedHour.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseUp);
+            this.txtWorkedHour.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.txtWorkedHour.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.txtWorkedHour.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // txtWage
             // 
@@ -129,9 +129,9 @@
             this.txtWage.Name = "txtWage";
             this.txtWage.Size = new System.Drawing.Size(280, 31);
             this.txtWage.TabIndex = 44;
-            this.txtWage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBoxDepartment_MouseDown);
-            this.txtWage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseMove);
-            this.txtWage.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseUp);
+            this.txtWage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.txtWage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.txtWage.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // txtEmail
             // 
@@ -142,9 +142,9 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(280, 31);
             this.txtEmail.TabIndex = 43;
-            this.txtEmail.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBoxDepartment_MouseDown);
-            this.txtEmail.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseMove);
-            this.txtEmail.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseUp);
+            this.txtEmail.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.txtEmail.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.txtEmail.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // txtContact
             // 
@@ -155,9 +155,9 @@
             this.txtContact.Name = "txtContact";
             this.txtContact.Size = new System.Drawing.Size(280, 31);
             this.txtContact.TabIndex = 41;
-            this.txtContact.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBoxDepartment_MouseDown);
-            this.txtContact.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseMove);
-            this.txtContact.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseUp);
+            this.txtContact.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.txtContact.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.txtContact.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // txtFullName
             // 
@@ -168,9 +168,9 @@
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(280, 31);
             this.txtFullName.TabIndex = 42;
-            this.txtFullName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBoxDepartment_MouseDown);
-            this.txtFullName.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseMove);
-            this.txtFullName.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseUp);
+            this.txtFullName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.txtFullName.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.txtFullName.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // txtIdNo
             // 
@@ -181,9 +181,9 @@
             this.txtIdNo.Name = "txtIdNo";
             this.txtIdNo.Size = new System.Drawing.Size(280, 31);
             this.txtIdNo.TabIndex = 40;
-            this.txtIdNo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBoxDepartment_MouseDown);
-            this.txtIdNo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseMove);
-            this.txtIdNo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseUp);
+            this.txtIdNo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.txtIdNo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.txtIdNo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // lblWorkedHour
             // 
@@ -194,9 +194,9 @@
             this.lblWorkedHour.Size = new System.Drawing.Size(123, 24);
             this.lblWorkedHour.TabIndex = 38;
             this.lblWorkedHour.Text = "Worked Hour";
-            this.lblWorkedHour.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBoxDepartment_MouseDown);
-            this.lblWorkedHour.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseMove);
-            this.lblWorkedHour.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseUp);
+            this.lblWorkedHour.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.lblWorkedHour.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.lblWorkedHour.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // lblWage
             // 
@@ -207,9 +207,9 @@
             this.lblWage.Size = new System.Drawing.Size(103, 24);
             this.lblWage.TabIndex = 37;
             this.lblWage.Text = "Wage Rate";
-            this.lblWage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBoxDepartment_MouseDown);
-            this.lblWage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseMove);
-            this.lblWage.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseUp);
+            this.lblWage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.lblWage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.lblWage.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // lblEmail
             // 
@@ -220,9 +220,9 @@
             this.lblEmail.Size = new System.Drawing.Size(57, 24);
             this.lblEmail.TabIndex = 36;
             this.lblEmail.Text = "Email";
-            this.lblEmail.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBoxDepartment_MouseDown);
-            this.lblEmail.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseMove);
-            this.lblEmail.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseUp);
+            this.lblEmail.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.lblEmail.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.lblEmail.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // lblFullName
             // 
@@ -233,9 +233,9 @@
             this.lblFullName.Size = new System.Drawing.Size(97, 24);
             this.lblFullName.TabIndex = 35;
             this.lblFullName.Text = "Full Name";
-            this.lblFullName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBoxDepartment_MouseDown);
-            this.lblFullName.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseMove);
-            this.lblFullName.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseUp);
+            this.lblFullName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.lblFullName.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.lblFullName.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // lblDepartment
             // 
@@ -246,9 +246,9 @@
             this.lblDepartment.Size = new System.Drawing.Size(107, 24);
             this.lblDepartment.TabIndex = 34;
             this.lblDepartment.Text = "Department";
-            this.lblDepartment.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBoxDepartment_MouseDown);
-            this.lblDepartment.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseMove);
-            this.lblDepartment.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseUp);
+            this.lblDepartment.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.lblDepartment.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.lblDepartment.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // lblContact
             // 
@@ -259,9 +259,9 @@
             this.lblContact.Size = new System.Drawing.Size(73, 24);
             this.lblContact.TabIndex = 33;
             this.lblContact.Text = "Contact";
-            this.lblContact.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBoxDepartment_MouseDown);
-            this.lblContact.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseMove);
-            this.lblContact.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseUp);
+            this.lblContact.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.lblContact.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.lblContact.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // lblJoinedDate
             // 
@@ -272,9 +272,9 @@
             this.lblJoinedDate.Size = new System.Drawing.Size(110, 24);
             this.lblJoinedDate.TabIndex = 32;
             this.lblJoinedDate.Text = "Joined Date";
-            this.lblJoinedDate.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBoxDepartment_MouseDown);
-            this.lblJoinedDate.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseMove);
-            this.lblJoinedDate.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseUp);
+            this.lblJoinedDate.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.lblJoinedDate.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.lblJoinedDate.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // lblDesignation
             // 
@@ -285,9 +285,9 @@
             this.lblDesignation.Size = new System.Drawing.Size(109, 24);
             this.lblDesignation.TabIndex = 31;
             this.lblDesignation.Text = "Designation";
-            this.lblDesignation.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBoxDepartment_MouseDown);
-            this.lblDesignation.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseMove);
-            this.lblDesignation.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseUp);
+            this.lblDesignation.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.lblDesignation.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.lblDesignation.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // lblAddress
             // 
@@ -298,9 +298,9 @@
             this.lblAddress.Size = new System.Drawing.Size(80, 24);
             this.lblAddress.TabIndex = 39;
             this.lblAddress.Text = "Address";
-            this.lblAddress.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBoxDepartment_MouseDown);
-            this.lblAddress.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseMove);
-            this.lblAddress.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseUp);
+            this.lblAddress.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.lblAddress.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.lblAddress.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // lblIdNo
             // 
@@ -311,9 +311,9 @@
             this.lblIdNo.Size = new System.Drawing.Size(55, 24);
             this.lblIdNo.TabIndex = 30;
             this.lblIdNo.Text = "Id No";
-            this.lblIdNo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBoxDepartment_MouseDown);
-            this.lblIdNo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseMove);
-            this.lblIdNo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseUp);
+            this.lblIdNo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.lblIdNo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.lblIdNo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // btnSave
             // 
@@ -333,9 +333,9 @@
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            this.btnSave.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBoxDepartment_MouseDown);
-            this.btnSave.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseMove);
-            this.btnSave.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseUp);
+            this.btnSave.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.btnSave.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.btnSave.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // btnCancel
             // 
@@ -355,9 +355,9 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            this.btnCancel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBoxDepartment_MouseDown);
-            this.btnCancel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseMove);
-            this.btnCancel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseUp);
+            this.btnCancel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.btnCancel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.btnCancel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // lblClose
             // 
@@ -404,9 +404,9 @@
             this.Name = "AddEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddEmployee";
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBoxDepartment_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseUp);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 

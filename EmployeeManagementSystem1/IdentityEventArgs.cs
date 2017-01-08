@@ -2,6 +2,11 @@
 
 namespace EmployeeManagementSystem1
 {
+    /*******
+     * 
+     * This class will the values from delegates and return the values through properties.
+     * 
+     *******/
     public class IdentityEventArgs : EventArgs
     {
         private string id;

@@ -78,9 +78,9 @@
             this.sideBarPanel.Name = "sideBarPanel";
             this.sideBarPanel.Size = new System.Drawing.Size(176, 555);
             this.sideBarPanel.TabIndex = 0;
-            this.sideBarPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseDown);
-            this.sideBarPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseMove);
-            this.sideBarPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseUp);
+            this.sideBarPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.sideBarPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.sideBarPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // btnGenerateReport
             // 
@@ -150,9 +150,9 @@
             this.logoPanel.Name = "logoPanel";
             this.logoPanel.Size = new System.Drawing.Size(176, 53);
             this.logoPanel.TabIndex = 0;
-            this.logoPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseDown);
-            this.logoPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseMove);
-            this.logoPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseUp);
+            this.logoPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.logoPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.logoPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // picBoxLogo
             // 
@@ -163,9 +163,9 @@
             this.picBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxLogo.TabIndex = 1;
             this.picBoxLogo.TabStop = false;
-            this.picBoxLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseDown);
-            this.picBoxLogo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseMove);
-            this.picBoxLogo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseUp);
+            this.picBoxLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.picBoxLogo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.picBoxLogo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // lblLogo
             // 
@@ -177,9 +177,9 @@
             this.lblLogo.Size = new System.Drawing.Size(80, 33);
             this.lblLogo.TabIndex = 0;
             this.lblLogo.Text = "EMS";
-            this.lblLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseDown);
-            this.lblLogo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseMove);
-            this.lblLogo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseUp);
+            this.lblLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.lblLogo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.lblLogo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // importEmployees
             // 
@@ -199,6 +199,9 @@
             this.importEmployees.Text = "Import Data";
             this.importEmployees.UseVisualStyleBackColor = false;
             this.importEmployees.Click += new System.EventHandler(this.importEmployees_Click);
+            this.importEmployees.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.importEmployees.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.importEmployees.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // headerPanel
             // 
@@ -212,9 +215,9 @@
             this.headerPanel.Name = "headerPanel";
             this.headerPanel.Size = new System.Drawing.Size(1046, 53);
             this.headerPanel.TabIndex = 1;
-            this.headerPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseDown);
-            this.headerPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseMove);
-            this.headerPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseUp);
+            this.headerPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.headerPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.headerPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // header
             // 
@@ -226,9 +229,9 @@
             this.header.Size = new System.Drawing.Size(428, 33);
             this.header.TabIndex = 2;
             this.header.Text = "Employee Management System";
-            this.header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseDown);
-            this.header.MouseMove += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseMove);
-            this.header.MouseUp += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseUp);
+            this.header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.header.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.header.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // lblMinimize
             // 
@@ -241,9 +244,9 @@
             this.lblMinimize.TabIndex = 1;
             this.lblMinimize.Text = "-";
             this.lblMinimize.Click += new System.EventHandler(this.lblMinimize_Click);
-            this.lblMinimize.MouseDown += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseDown);
-            this.lblMinimize.MouseMove += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseMove);
-            this.lblMinimize.MouseUp += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseUp);
+            this.lblMinimize.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.lblMinimize.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.lblMinimize.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // lblClose
             // 
@@ -256,9 +259,9 @@
             this.lblClose.TabIndex = 0;
             this.lblClose.Text = "x";
             this.lblClose.Click += new System.EventHandler(this.lblClose_Click);
-            this.lblClose.MouseDown += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseDown);
-            this.lblClose.MouseMove += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseMove);
-            this.lblClose.MouseUp += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseUp);
+            this.lblClose.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.lblClose.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.lblClose.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // containerPanel
             // 
@@ -280,6 +283,9 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1046, 502);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // dataGridView
             // 
@@ -308,6 +314,9 @@
             this.dataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView.Size = new System.Drawing.Size(1046, 440);
             this.dataGridView.TabIndex = 4;
+            this.dataGridView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.dataGridView.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.dataGridView.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // Id
             // 
@@ -385,6 +394,9 @@
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.btnEdit.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.btnEdit.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.btnEdit.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // btnDelete
             // 
@@ -404,6 +416,9 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnDelete.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.btnDelete.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.btnDelete.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
             // EmployeeSysMainForm
             // 
@@ -419,9 +434,9 @@
             this.Name = "EmployeeSysMainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee Management System";
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.EmployeeSysMainForm_MouseUp);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             this.sideBarPanel.ResumeLayout(false);
             this.logoPanel.ResumeLayout(false);
             this.logoPanel.PerformLayout();

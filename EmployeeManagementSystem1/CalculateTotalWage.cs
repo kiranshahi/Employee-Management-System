@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EmployeeManagementSystem1
+﻿namespace EmployeeManagementSystem1
 {
+    /***********
+     * *
+     * *
+     * *This class will calculate the total wagae based on the parameter send from GeneratePayroll 
+     * * method of EmployeeSysMainForm class.
+     * *
+     * * 
+     * ***********/
 
     class CalculateTotalWage
     {
@@ -14,6 +16,12 @@ namespace EmployeeManagementSystem1
         public int EmpWageRate;
         public int EmpWorkedHours;
         public int EmpTotalWage;
+
+        /******
+         * * 
+         * * Method will Calculate the total wage of employee.
+         * * 
+         * *******/
 
         public CalculateTotalWage(string name, string department, int rate, int workedHour)
         {
