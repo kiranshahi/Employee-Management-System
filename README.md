@@ -41,7 +41,43 @@ Some of the features of this system are:
 6. System users can `delete` the employee from dataGridView.
 
 ---
+Screenshots
 
+![alt text][altText]
+
+[altText]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Home%20Screen.PNG "Home Screen of System"
+
+
+![alt text][altText]
+
+[altText]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Import%20CSV.PNG "Import CSV file"
+
+
+![alt text][altText]
+
+[altText]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Employee%20Details.PNG "Employee Details"
+
+
+![alt text][altText]
+
+[altText]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Add%20Employee.PNG "Add Employee Form"
+
+
+![alt text][altText]
+
+[altText]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Edit%20Employee.PNG "Edit Employee Form"
+
+
+![alt text][altText]
+
+[altText]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Payroll.PNG "Generate Pay Roll"
+
+
+![alt text][altText]
+
+[altText]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/report.PNG "Generate Pie-chart"
+
+---
 You can download and manipulate the code for learning purpose.
 
 
