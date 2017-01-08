@@ -43,39 +43,39 @@ Some of the features of this system are:
 ---
 Screenshots
 
-![alt text][altText]
+![alt text][homeScreen]
 
-[altText]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Home%20Screen.PNG "Home Screen of System"
-
-
-![alt text][altText]
-
-[altText]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Import%20CSV.PNG "Import CSV file"
+[homeScreen]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Home%20Screen.PNG "Home Screen of System"
 
 
-![alt text][altText]
+![alt text][importCSV]
 
-[altText]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Employee%20Details.PNG "Employee Details"
-
-
-![alt text][altText]
-
-[altText]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Add%20Employee.PNG "Add Employee Form"
+[importCSV]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Import%20CSV.PNG "Import CSV file"
 
 
-![alt text][altText]
+![alt text][employeeDetails]
 
-[altText]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Edit%20Employee.PNG "Edit Employee Form"
-
-
-![alt text][altText]
-
-[altText]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Payroll.PNG "Generate Pay Roll"
+[employeeDetails]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Employee%20Details.PNG "Employee Details"
 
 
-![alt text][altText]
+![alt text][addEmployee]
 
-[altText]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/report.PNG "Generate Pie-chart"
+[addEmployee]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Add%20Employee.PNG "Add Employee Form"
+
+
+![alt text][editEmployee]
+
+[editEmployee]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Edit%20Employee.PNG "Edit Employee Form"
+
+
+![alt text][generatePayroll]
+
+[generatePayroll]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Payroll.PNG "Generate Pay Roll"
+
+
+![alt text][generatePiechart]
+
+[generatePiechart]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/report.PNG "Generate Pie-chart"
 
 ---
 You can download and manipulate the code for learning purpose.
