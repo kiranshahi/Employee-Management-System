@@ -41,7 +41,7 @@ Some of the features of this system are:
 6. System users can `delete` the employee from dataGridView.
 
 ---
-Screenshots
+###Screenshots
 
 ![alt text][homeScreen]
 
