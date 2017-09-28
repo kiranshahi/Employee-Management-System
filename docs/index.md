@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Contributing
 
 Do you want to contribute to this project? Here are some of the guidelines on how to contribute on this project:
@@ -25,4 +29,4 @@ This is also where you can report issues yourself. If you find any issues with t
 Once you have selected an Issue to solve, go ahead and write the code for that in your fork **on a separate branch** and send in a Pull Request. For more info about Pull Requests, visit [this](https://help.github.com/articles/using-pull-requests/) link.
 
 
-We look forward to your contributions. 
+We look forward to your contributions.

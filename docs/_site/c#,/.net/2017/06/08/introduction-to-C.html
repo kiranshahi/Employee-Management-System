@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>What is C# and .NET</title>
+  <meta name="description" content="C# is an elegant and type-safe object-oriented programming language that enables developer to build a variety of secure and robust applications on the top of...">
+
+  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="canonical" href="/c%23,/.net/2017/06/08/introduction-to-C.html">
+  <link rel="alternate" type="application/rss+xml" title="Kiran&#39;s blog | Kiran Shahi is a .NET developer from Nepal" href="/feed.xml">
+  
+  
+</head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/" title="Kiran Shahi">Kiran Shahi</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a class="page-scroll" href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+        </li>
+        <li>
+          <a class="page-scroll" href="https://www.facebook.com/itskirans"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a>
+        </li>
+        <li>
+          <a class="page-scroll" href="https://github.com/kiranshahi"><i class="fa fa-github" aria-hidden="true"></i> Github</a>
+        </li>
+        <li>
+          <a class="page-scroll" href="mailto:mail@kirans.com.np"><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact</a>
+        </li>
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div>
+</nav>
+
+    <div class="container">
+    <div class="row">
+      <div class="col-md-3">  
+
+        <div class="thumbnail imgContainer">
+            <img src="/assets/img/Kiran-Shahi.jpeg" title="Kiran Shahi" alt="Kiran Shahi">
+        <div class="caption">
+          <h3>Kiran Shahi</h3>
+        </div>
+          <p>
+            Hi I am Kiran Shahi from Nepal. I am a student of Computer Science.
+          </p>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h4>About Me</h4>
+            <p>
+              <span class="glyphicon glyphicon-education"></span>
+              BSc (Hons) Computing at <a href="http://www.islington.edu.np/">Islington College</a>
+            </p>
+            <p>
+              <span class="glyphicon glyphicon-map-marker"></span>
+              Kathmandu, Nepal
+            </p>
+            <p>
+              <span class="glyphicon glyphicon-home"></span>
+              Pokhara, Nepal
+            </p>
+            <p>
+              <span class="glyphicon glyphicon-phone"></span>
+              +977-9840603621
+            </p>
+            <p>
+              <i class="fa fa-futbol-o" aria-hidden="true"></i>
+              <a href="http://www.nepaligoal.com">www.nepaligoal.com</a>
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-body">
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">What is C# and .NET</h1>
+      <p class="post-meta">
+        
+        <span class="post-meta">Published on <b>Jun 8, 2017</b></span>
+        <span class="post-meta"> by <b>Kiran Shahi</b></span>
+      </header>
+
+      <div class="post-content" itemprop="articleBody">
+        <p>C# is an elegant and type-safe object-oriented programming language that enables developer to build a variety of secure and robust applications on the top of .NET Framework. It was developed by the team which was led by Anders Hejlsberg. C# was first appeared on 2000 AD.</p>
+
+<h3>Hello World program in C#</h3>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">HelloWorld</span>
+<span class="p">{</span>
+    <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Hello World!"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2>Differences between C# and .NET</h2>
+
+<p>C# is a general purpose object-oriented programming language like Java, C++ etc which runs on the .NET Framework.
+Where as .NET is a blanket term that tends to cover both the .NET Framework(an application framework library) and the Common Language Runtime which is the runtime in which .NET assemblies run.</p>
+
+<p><b>Remember:</b> <code class="highlighter-rouge">.NET isn't just a library, but also a runtime for executing applications.</code></p>
+
+<p>i.e. .NET Framework includes a large class library named Framework Class Library (FCL) and provides user interface, data access, database connectivity, cryptography, web application development, numeric algorithms and network communications.</p>
+
+<h4>References</h4>
+
+<p><a href="https://stackoverflow.com/questions/2724864/what-is-the-difference-between-c-sharp-and-net">What is the difference between C# and .NET?</a></p>
+
+
+      </div>
+      <div class="PageNavigation">
+        
+        <a class="prev" href="/2017/06/08/static-keyword-in-C.html">&laquo; Static Keyword In C#</a>
+        
+        
+      </div>
+      
+      <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://kirans.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script id="dsq-count-scr" src="//kirans.disqus.com/count.js" async></script>
+    </article>
+  </div>
+        </div>
+      </div>
+      
+      <div class="col-md-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+              <h3 class="panel-title">My github repositories.</h3>
+            </div>
+          <div id="github-projects">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/assets/bootstrap/jquery/jquery.min.js"></script>
+<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="/assets/github.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#github-projects").loadRepositories('kiranshahi','sort=updated');
+	});
+</script>
+
+  </body>
+
+</html>

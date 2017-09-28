@@ -1,0 +1,106 @@
+body { 
+    padding-top: 70px; 
+    background: #F5F8FA;
+}
+
+.caption h3{
+    text-align: center;
+    margin: 0;
+}
+
+.img-circle {
+    height: 90px;
+    width: 90px;
+}
+
+.overlay {
+    position:absolute;
+    top:19%;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:9999;
+}
+
+.caption {
+    position: relative;
+}
+
+
+/* navbar */
+.navbar-inverse {
+    background-color: #3097D1 !important;
+    border-color: #E7E7E7 !important;
+}
+/* title */
+.navbar-inverse .navbar-brand {
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive !important;
+    color: #fff !important;
+}
+
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive !important;
+    color: #fff !important;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #fff !important;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff !important;
+}
+
+.thumbnail p {
+    text-align: center;
+}
+
+.qv {
+    margin-bottom: 22px;
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.profilePic {
+    max-width: 100px;
+    margin-top: -70px;
+    margin-bottom: 5px;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.welcomeText {
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive !important;
+}
+
+@media (max-width: 767px) {
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+        color: #777 !important;
+    }
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333 !important;
+    }
+}
+
+.PageNavigation {
+  font-size: 14px;
+  display: block;
+  width: auto;
+  overflow: hidden;
+}
+
+.PageNavigation a {
+  display: block;
+  width: 50%;
+  float: left;
+  margin: 1em 0;
+}
+
+.PageNavigation .next {
+  text-align: right;
+}

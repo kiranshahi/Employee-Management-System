@@ -1,0 +1,8 @@
+<script src="{{ "/assets/bootstrap/jquery/jquery.min.js" | relative_url }}"></script>
+<script src="{{ "/assets/bootstrap/js/bootstrap.min.js" | relative_url }}"></script>
+<script src="{{ "/assets/github.js" | relative_url }}" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#github-projects").loadRepositories('kiranshahi','sort=updated');
+	});
+</script>

@@ -1,0 +1,30 @@
+---
+layout: details
+---
+<div class="panel-body">
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+      <p class="post-meta">
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+        <span class="post-meta">Published on <b>{{ page.date | date: date_format }}</b></span>
+        <span class="post-meta"> by <b> <a href="https://github.com/kiranshahi">Kiran Shahi</a></b></span>
+      </header>
+
+      <div class="post-content" itemprop="articleBody">
+        {{ content }}
+
+        <div class="PageNavigation">
+          {% if page.previous.url %}
+          <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+          {% endif %}
+          {% if page.next.url %}
+          <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+          {% endif %}
+        </div>
+
+      </div>
+      
+      {% include disqus_comments.html %}
+    </article>
+  </div>

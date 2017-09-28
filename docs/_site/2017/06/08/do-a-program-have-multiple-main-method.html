@@ -1,0 +1,36 @@
+<p>Basically main method is the entry point into application. We can define multiple Main methods but we have to select a single main method when running our app. Need to specify which to use as the entry point for the application by our compiler.</p>
+
+<p>For example:</p>
+
+<p>using System;
+using System.Collections.Generic;
+using System.Text;</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>namespace Multiple_MainClasses
+{
+	class A
+	{
+		static void Main(string[] args)
+		{
+			Console.WriteLine("I am from Class A");
+			Console.ReadLine();
+		}
+	}
+
+	class  B 
+	{
+		static void Main(string[] args)
+		{
+			Console.WriteLine("I am from Class B");
+			Console.ReadLine();
+		}
+	}
+}
+
+When we run this code we will get compilation error. To resolve the error we need to specify which Main method we want to execute. To specify the entry point we can follow the following stapes:
+
+1) Go to project properties in solution explorer or press ctrl + alt + L.
+2) Go to application tab
+3) Select class with method which we want to execute
+</code></pre>
+</div>

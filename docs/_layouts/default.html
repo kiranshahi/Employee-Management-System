@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{% include head.html %}
+
+<body>
+
+  {% include header.html %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">  
+
+        <div class="thumbnail imgContainer">
+          <img src="https://avatars.githubusercontent.com/kiranshahi" title="Kiran Shahi" alt="Kiran Shahi">
+          <div class="caption">
+            <h3>Kiran Shahi</h3>
+          </div>
+          <p>
+            Hi I am Kiran Shahi from Nepal. I am a student of Computer Science.
+          </p>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h4>About Me</h4>
+            <p>
+              <span class="glyphicon glyphicon-education"></span>
+              BSc (Hons) Computing at <a href="http://www.islington.edu.np/">Islington College</a>
+            </p>
+            <p>
+              <span class="glyphicon glyphicon-map-marker"></span>
+              Kathmandu, Nepal
+            </p>
+            <p>
+              <span class="glyphicon glyphicon-home"></span>
+              Pokhara, Nepal
+            </p>
+            <p>
+              <span class="glyphicon glyphicon-phone"></span>
+              +977-9840603621
+            </p>
+            <p>
+              <i class="fa fa-futbol-o" aria-hidden="true"></i>
+              <a href="http://www.nepaligoal.com">www.nepaligoal.com</a>
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          {{ content }}
+        </div>
+      </div>
+      
+      <div class="col-md-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">My github repositories.</h3>
+          </div>
+          <div id="github-projects">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+  </html>

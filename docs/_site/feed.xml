@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<generator uri="http://jekyllrb.com" version="3.0.1">Jekyll</generator>
+<link href="/blog/feed.xml" rel="self" type="application/atom+xml" />
+<link href="/blog/" rel="alternate" type="text/html" />
+<updated>2017-08-27T21:47:28+05:45</updated>
+<id>/blog/</id>
+<subtitle>Welcome to kiran&#39;s blog. Kiran Shahi is a .NET guy. He is passionate about technology.
+</subtitle>
+<entry>
+<title>What is C# and .NET</title>
+<link href="/blog/c%23,/.net/2017/06/08/introduction-to-C.html" rel="alternate" type="text/html" title="What is C# and .NET" />
+<published>2017-06-08T07:04:22+05:45</published>
+<updated>2017-06-08T07:04:22+05:45</updated>
+<id>/blog/c%23,/.net/2017/06/08/introduction-to-C#</id>
+<content type="html" xml:base="/blog/c%23,/.net/2017/06/08/introduction-to-C.html">&lt;p&gt;C# is an elegant and type-safe object-oriented programming language that enables developer to build a variety of secure and robust applications on the top of .NET Framework. It was developed by the team which was led by Anders Hejlsberg. C# was first appeared on 2000 AD.&lt;/p&gt;
+
+&lt;h3&gt;Hello World program in C#&lt;/h3&gt;
+&lt;p&gt;{% highlight C# %}
+using System;&lt;/p&gt;
+
+&lt;p&gt;namespace HelloWorld
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(“Hello World!”);
+        }
+    }
+}
+{% endhighlight %}&lt;/p&gt;
+
+&lt;h2&gt;Differences between C# and .NET&lt;/h2&gt;
+
+&lt;p&gt;C# is a general purpose object-oriented programming language like Java, C++ etc which runs on the .NET Framework.
+Where as .NET is a blanket term that tends to cover both the .NET Framework(an application framework library) and the Common Language Runtime which is the runtime in which .NET assemblies run.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Remember:&lt;/b&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;.NET isn&#39;t just a library, but also a runtime for executing applications.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;i.e. .NET Framework includes a large class library named Framework Class Library (FCL) and provides user interface, data access, database connectivity, cryptography, web application development, numeric algorithms and network communications.&lt;/p&gt;
+
+&lt;h4&gt;References&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/2724864/what-is-the-difference-between-c-sharp-and-net&quot;&gt;What is the difference between C# and .NET?&lt;/a&gt;&lt;/p&gt;
+
+</content>
+<author>
+<name>Kiran Shahi</name>
+</author>
+<summary>C# is an elegant and type-safe object-oriented programming language that enables developer to build a variety of secure and robust applications on the top of .NET Framework. It was developed by the team which was led by Anders Hejlsberg. C# was first appeared on 2000 AD.</summary>
+</entry>
+<entry>
+<title>Static Keyword In C#</title>
+<link href="/blog/2017/06/08/static-keyword-in-C.html" rel="alternate" type="text/html" title="Static Keyword In C#" />
+<published>2017-06-08T00:00:00+05:45</published>
+<updated>2017-06-08T00:00:00+05:45</updated>
+<id>/blog/2017/06/08/static-keyword-in-C#</id>
+<content type="html" xml:base="/blog/2017/06/08/static-keyword-in-C.html">&lt;p&gt;When a method is static then it can be invoked directly from the class level without creating an object. This is the reason for making a main() method static.&lt;/p&gt;
+
+&lt;p&gt;Points for static keyword
+** A static method can be invoked directly from the class level
+** A static method not requires any class object
+** Any main() method is shared through entire class scope so it always appears with static keyword.&lt;/p&gt;
+
+&lt;p&gt;Points for static class
+** Contains only static memebers.
+** Cannot be instantiated.
+** Is sealed.
+** Cannot contain Instance Constructors.&lt;/p&gt;
+</content>
+<summary>When a method is static then it can be invoked directly from the class level without creating an object. This is the reason for making a main() method static.</summary>
+</entry>
+<entry>
+<title>Namespace In C#</title>
+<link href="/blog/2017/06/08/namespace-in-C.html" rel="alternate" type="text/html" title="Namespace In C#" />
+<published>2017-06-08T00:00:00+05:45</published>
+<updated>2017-06-08T00:00:00+05:45</updated>
+<id>/blog/2017/06/08/namespace-in-C#</id>
+<content type="html" xml:base="/blog/2017/06/08/namespace-in-C.html">
+</content>
+<summary></summary>
+</entry>
+<entry>
+<title>Do A Program Have Multiple Main Method</title>
+<link href="/blog/2017/06/08/do-a-program-have-multiple-main-method.html" rel="alternate" type="text/html" title="Do A Program Have Multiple Main Method" />
+<published>2017-06-08T00:00:00+05:45</published>
+<updated>2017-06-08T00:00:00+05:45</updated>
+<id>/blog/2017/06/08/do-a-program-have-multiple-main-method</id>
+<content type="html" xml:base="/blog/2017/06/08/do-a-program-have-multiple-main-method.html">&lt;p&gt;Basically main method is the entry point into application. We can define multiple Main methods but we have to select a single main method when running our app. Need to specify which to use as the entry point for the application by our compiler.&lt;/p&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+
+&lt;p&gt;using System;
+using System.Collections.Generic;
+using System.Text;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;namespace Multiple_MainClasses
+{
+	class A
+	{
+		static void Main(string[] args)
+		{
+			Console.WriteLine(&quot;I am from Class A&quot;);
+			Console.ReadLine();
+		}
+	}
+
+	class  B 
+	{
+		static void Main(string[] args)
+		{
+			Console.WriteLine(&quot;I am from Class B&quot;);
+			Console.ReadLine();
+		}
+	}
+}
+
+When we run this code we will get compilation error. To resolve the error we need to specify which Main method we want to execute. To specify the entry point we can follow the following stapes:
+
+1) Go to project properties in solution explorer or press ctrl + alt + L.
+2) Go to application tab
+3) Select class with method which we want to execute
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</content>
+<summary>Basically main method is the entry point into application. We can define multiple Main methods but we have to select a single main method when running our app. Need to specify which to use as the entry point for the application by our compiler.</summary>
+</entry>
+<entry>
+<title>This is a test post!</title>
+<link href="/blog/test/2017/06/03/this-is-a-test-post.html" rel="alternate" type="text/html" title="This is a test post!" />
+<published>2017-06-03T07:04:22+05:45</published>
+<updated>2017-06-03T07:04:22+05:45</updated>
+<id>/blog/test/2017/06/03/this-is-a-test-post</id>
+<content type="html" xml:base="/blog/test/2017/06/03/this-is-a-test-post.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;p&gt;{% highlight ruby %}
+def print_hi(name)
+  puts “Hi, #{name}”
+end
+print_hi(‘Tom’)
+#=&amp;gt; prints ‘Hi, Tom’ to STDOUT.
+{% endhighlight %}&lt;/p&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+
+</content>
+<author>
+<name>Kiran Shahi</name>
+</author>
+<summary>You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary>
+</entry>
+<entry>
+<title>Hello World</title>
+<link href="/blog/test/2017/06/03/hello-world.html" rel="alternate" type="text/html" title="Hello World" />
+<published>2017-06-03T07:04:22+05:45</published>
+<updated>2017-06-03T07:04:22+05:45</updated>
+<id>/blog/test/2017/06/03/hello-world</id>
+<content type="html" xml:base="/blog/test/2017/06/03/hello-world.html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+
+&lt;p&gt;{% highlight ruby %}
+def print_hi(name)
+  puts “Hi, #{name}”
+end
+print_hi(‘Tom’)
+#=&amp;gt; prints ‘Hi, Tom’ to STDOUT.
+{% endhighlight %}&lt;/p&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+
+</content>
+<author>
+<name>Kiran Shahi</name>
+</author>
+<summary>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</summary>
+</entry>
+<entry>
+<title>Welcome to Jekyll!</title>
+<link href="/blog/test/2017/06/02/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" />
+<published>2017-06-02T18:04:22+05:45</published>
+<updated>2017-06-02T18:04:22+05:45</updated>
+<id>/blog/test/2017/06/02/welcome-to-jekyll</id>
+<content type="html" xml:base="/blog/test/2017/06/02/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;p&gt;{% highlight ruby %}
+def print_hi(name)
+  puts “Hi, #{name}”
+end
+print_hi(‘Tom’)
+#=&amp;gt; prints ‘Hi, Tom’ to STDOUT.
+{% endhighlight %}&lt;/p&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+
+</content>
+<author>
+<name>Kiran Shahi</name>
+</author>
+<summary>You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary>
+</entry>
+</feed>

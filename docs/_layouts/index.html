@@ -1,0 +1,68 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<div class="panel-body">
+  {% for post in paginator.posts %}
+  <h2>
+    <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+  </h2>
+  {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+  <p>
+    <span class="post-meta">Published on <b>{{ post.date | date: date_format }}</b></span>
+    <span class="post-meta"> by <b> <a href="https://github.com/kiranshahi">Kiran Shahi</a></b></span>
+  </p>
+  <p class="text-justify">{{ post.excerpt }}</p>
+  <a class="btn btn-default" href="{{ post.url | relative_url }}" role="button">Read More ...</a>
+  <hr>
+  {% endfor %}
+</div>
+
+<!-- Pagination links -->
+{% if paginator.total_pages > 1 %}
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+
+    {% if paginator.previous_page %}
+    <li>
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    {% else %}
+    <li class="disabled">
+      <span aria-hidden="true">&laquo;</span>
+    </li>
+    {% endif %}
+    
+    {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+    <li class="active">
+      <span>{{ page }}</span>
+    </li>
+    {% elsif page == 1 %}
+    <li>
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+    </li>
+    {% else %}
+    <li>
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    </li>
+    {% endif %}
+    {% endfor %}
+    {% if paginator.next_page %}
+    <li>
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+    {% else %}
+    <li class="disabled">
+      <span aria-hidden="true">&raquo;</span>
+    </li>
+    {% endif %}
+  </ul>
+</nav>
+{% endif %}
