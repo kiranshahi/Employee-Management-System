@@ -1,7 +1,3 @@
----
-layout: default
----
-
 # Contributing
 
 Do you want to contribute to this project? Here are some of the guidelines on how to contribute on this project:

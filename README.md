@@ -1,7 +1,3 @@
----
-layout: default
----
-
 # Employee Management System
 
 ---
