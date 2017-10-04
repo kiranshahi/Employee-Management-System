@@ -14,9 +14,9 @@ namespace EmployeeManagementSystem1
      * ************/
     public partial class EmployeeSysMainForm : Form
     {
-        private bool _dragging = false;
-        private Point _start_point = new Point(0, 0);
-        private int row; 
+        private bool _dragging;
+        private Point _startPoint = new Point(0, 0);
+        private int _row; 
 
         public EmployeeSysMainForm()
         {
@@ -42,16 +42,14 @@ namespace EmployeeManagementSystem1
         private void OnMouseDown(object sender, MouseEventArgs e)
         {
             _dragging = true;
-            _start_point = new Point(e.X, e.Y);
+            _startPoint = new Point(e.X, e.Y);
         }
 
         private void OnMouseMove(object sender, MouseEventArgs e)
         {
-            if (_dragging)
-            {
-                Point p = PointToScreen(e.Location);
-                Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
-            }
+            if (!_dragging) return;
+            var p = PointToScreen(e.Location);
+            Location = new Point(p.X - this._startPoint.X, p.Y - this._startPoint.Y);
         }
 
         private void OnMouseUp(object sender, MouseEventArgs e)
@@ -62,8 +60,8 @@ namespace EmployeeManagementSystem1
 
         private void addEmployee_Click(object sender, EventArgs e)
         {
-            AddEmployee addEmp = new AddEmployee();
-            addEmp.IdentityUpdated += new AddEmployee.IdentityHandler(this.SaveRecord);
+            var addEmp = new AddEmployee();
+            addEmp.IdentityUpdated += this.SaveRecord;
             addEmp.ShowDialog();
         }
 
@@ -72,7 +70,7 @@ namespace EmployeeManagementSystem1
             try
             {
 
-                int count = dataGridView.Rows.Count-1;
+                var count = dataGridView.Rows.Count-1;
                 dataGridView.Rows.Add();
                 dataGridView.Rows[count].Cells[0].Value = e.Id;
                 dataGridView.Rows[count].Cells[1].Value = e.FullName;
@@ -112,22 +110,22 @@ namespace EmployeeManagementSystem1
         {
             try
             {
-                int row = dataGridView.CurrentCell.RowIndex;
-                string id = Convert.ToString(dataGridView.Rows[row].Cells[0].Value);
-                string name = Convert.ToString(dataGridView.Rows[row].Cells[1].Value);
-                string address = Convert.ToString(dataGridView.Rows[row].Cells[2].Value);
-                string contact = Convert.ToString(dataGridView.Rows[row].Cells[3].Value);
-                string email = Convert.ToString(dataGridView.Rows[row].Cells[4].Value);
-                string desigination = Convert.ToString(dataGridView.Rows[row].Cells[5].Value);
-                string department = Convert.ToString(dataGridView.Rows[row].Cells[6].Value);
-                string dateOfJoin = Convert.ToString(dataGridView.Rows[row].Cells[7].Value);
-                string wageRate = Convert.ToString(dataGridView.Rows[row].Cells[8].Value);
-                string hourWorked = Convert.ToString(dataGridView.Rows[row].Cells[9].Value);
+                var row = dataGridView.CurrentCell.RowIndex;
+                var id = Convert.ToString(dataGridView.Rows[row].Cells[0].Value);
+                var name = Convert.ToString(dataGridView.Rows[row].Cells[1].Value);
+                var address = Convert.ToString(dataGridView.Rows[row].Cells[2].Value);
+                var contact = Convert.ToString(dataGridView.Rows[row].Cells[3].Value);
+                var email = Convert.ToString(dataGridView.Rows[row].Cells[4].Value);
+                var desigination = Convert.ToString(dataGridView.Rows[row].Cells[5].Value);
+                var department = Convert.ToString(dataGridView.Rows[row].Cells[6].Value);
+                var dateOfJoin = Convert.ToString(dataGridView.Rows[row].Cells[7].Value);
+                var wageRate = Convert.ToString(dataGridView.Rows[row].Cells[8].Value);
+                var hourWorked = Convert.ToString(dataGridView.Rows[row].Cells[9].Value);
 
 
-                AddEmployee addEmp = new AddEmployee();
+                var addEmp = new AddEmployee();
                 addEmp.LoadData(id, name, address, contact, email, desigination, department, dateOfJoin, wageRate, hourWorked);
-                addEmp.IdentityUpdated += new AddEmployee.IdentityHandler(this.UpdateRecord);
+                addEmp.IdentityUpdated += this.UpdateRecord;
                 addEmp.ShowDialog();
             }
             catch (Exception exception)
@@ -138,16 +136,16 @@ namespace EmployeeManagementSystem1
 
         private void UpdateRecord(object sender, IdentityEventArgs e)
         {
-            dataGridView.Rows[row].Cells[0].Value = e.Id;
-            dataGridView.Rows[row].Cells[1].Value = e.FullName;
-            dataGridView.Rows[row].Cells[2].Value = e.Address;
-            dataGridView.Rows[row].Cells[3].Value = e.Contact;
-            dataGridView.Rows[row].Cells[4].Value = e.Email;
-            dataGridView.Rows[row].Cells[5].Value = e.Designation;
-            dataGridView.Rows[row].Cells[6].Value = e.Department;
-            dataGridView.Rows[row].Cells[7].Value = e.DateOfJoin;
-            dataGridView.Rows[row].Cells[8].Value = e.WageRate;
-            dataGridView.Rows[row].Cells[9].Value = e.WorkedHour;
+            dataGridView.Rows[_row].Cells[0].Value = e.Id;
+            dataGridView.Rows[_row].Cells[1].Value = e.FullName;
+            dataGridView.Rows[_row].Cells[2].Value = e.Address;
+            dataGridView.Rows[_row].Cells[3].Value = e.Contact;
+            dataGridView.Rows[_row].Cells[4].Value = e.Email;
+            dataGridView.Rows[_row].Cells[5].Value = e.Designation;
+            dataGridView.Rows[_row].Cells[6].Value = e.Department;
+            dataGridView.Rows[_row].Cells[7].Value = e.DateOfJoin;
+            dataGridView.Rows[_row].Cells[8].Value = e.WageRate;
+            dataGridView.Rows[_row].Cells[9].Value = e.WorkedHour;
 
         }
 
@@ -160,19 +158,19 @@ namespace EmployeeManagementSystem1
         //This method will add all the required values to generate payroll in wageDetails list
         public void GeneratePayroll()
         {
-            List<CalculateTotalWage> wageDetailsList = new List<CalculateTotalWage>();
+            var wageDetailsList = new List<CalculateTotalWage>();
             try
             {
-                for (int i = 0; i < dataGridView.Rows.Count - 1; i++)
+                for (var i = 0; i < dataGridView.Rows.Count - 1; i++)
                 {
-                    string name = Convert.ToString(dataGridView.Rows[i].Cells[1].Value);
-                    string department = Convert.ToString(dataGridView.Rows[i].Cells[6].Value);
-                    int wageRate = Int32.Parse(dataGridView.Rows[i].Cells[8].Value.ToString());
-                    int workedHour = Int32.Parse(dataGridView.Rows[i].Cells[9].Value.ToString());
+                    var name = Convert.ToString(dataGridView.Rows[i].Cells[1].Value);
+                    var department = Convert.ToString(dataGridView.Rows[i].Cells[6].Value);
+                    var wageRate = int.Parse(dataGridView.Rows[i].Cells[8].Value.ToString());
+                    var workedHour = int.Parse(dataGridView.Rows[i].Cells[9].Value.ToString());
 
                     wageDetailsList.Add(new CalculateTotalWage(name, department, wageRate, workedHour));
                 }
-                GeneratePayRoll generatePayroll = new GeneratePayRoll(wageDetailsList);
+                var generatePayroll = new GeneratePayRoll(wageDetailsList);
                 generatePayroll.ShowDialog();
             }
 
@@ -184,7 +182,7 @@ namespace EmployeeManagementSystem1
 
         private void btnGenerateReport_Click(object sender, EventArgs e)
         {
-            DisplayChart report = new DisplayChart(dataGridView);
+            var report = new DisplayChart(dataGridView);
             report.ShowDialog();
         }
         
@@ -196,59 +194,42 @@ namespace EmployeeManagementSystem1
          * **/
         public void ImportEmployeeFromCsv()
         {
-            using (OpenFileDialog openFileDialog1 = new OpenFileDialog() { Filter = "CSV|*.csv", ValidateNames = true, Multiselect = false })
+            using (var openFileDialog1 = new OpenFileDialog() { Filter = "CSV|*.csv", ValidateNames = true, Multiselect = false })
             {
-                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                if (openFileDialog1.ShowDialog() != DialogResult.OK) return;
+
+                const char sepChar = ',';
+                const char quoteChar = '"';
+                var employeeList = new List<string[]>();
+                try
                 {
-                    char sepChar = ',';
-                    char quoteChar = '"';
-                    List<string[]> employeeList = new List<string[]>();
-                    try
+                    using (Stream stream = null)
                     {
-                        using (Stream stream = null)
+                        var rows = File.ReadAllLines(openFileDialog1.FileName);
+                        foreach (var csvRow in rows)
                         {
-                            string[] rows = File.ReadAllLines(openFileDialog1.FileName);
-                            foreach (string csvRow in rows)
+                            var inQuotes = false;
+                            var fields = new List<string>();
+                            var field = "";
+                            for (var i = 0; i < csvRow.Length; i++)
                             {
-                                bool inQuotes = false;
-                                List<string> fields = new List<string>();
-                                string field = "";
-                                for (int i = 0; i < csvRow.Length; i++)
+                                if (inQuotes)
                                 {
-                                    if (inQuotes)
+                                    if (i < csvRow.Length - 1 && csvRow[i] == quoteChar && csvRow[i + 1] == quoteChar)
                                     {
-                                        if (i < csvRow.Length - 1 && csvRow[i] == quoteChar && csvRow[i + 1] == quoteChar)
-                                        {
-                                            i = i++;
-                                            field += quoteChar;
-                                        }
-                                        else if (csvRow[i] == quoteChar)
-                                        {
-                                            inQuotes = false;
-                                        }
-                                        else
-                                        {
-                                            if (csvRow[i - 1] == quoteChar)
-                                            {
-                                                field = "";
-                                                field += csvRow[i];
-                                            }
-                                            else
-                                            {
-                                                field += csvRow[i];
-                                            }
-                                        }
+                                        i = i++;
+                                        field += quoteChar;
+                                    }
+                                    else if (csvRow[i] == quoteChar)
+                                    {
+                                        inQuotes = false;
                                     }
                                     else
                                     {
-                                        if (csvRow[i] == quoteChar)
+                                        if (csvRow[i - 1] == quoteChar)
                                         {
-                                            inQuotes = true;
-                                        }
-                                        if (csvRow[i] == sepChar)
-                                        {
-                                            fields.Add(field);
                                             field = "";
+                                            field += csvRow[i];
                                         }
                                         else
                                         {
@@ -256,25 +237,40 @@ namespace EmployeeManagementSystem1
                                         }
                                     }
                                 }
-                                if (!string.IsNullOrEmpty(field))
+                                else
                                 {
-                                    fields.Add(field);
-                                    field = "";
+                                    if (csvRow[i] == quoteChar)
+                                    {
+                                        inQuotes = true;
+                                    }
+                                    if (csvRow[i] == sepChar)
+                                    {
+                                        fields.Add(field);
+                                        field = "";
+                                    }
+                                    else
+                                    {
+                                        field += csvRow[i];
+                                    }
                                 }
-                                employeeList.Add(fields.ToArray());
                             }
+                            if (!string.IsNullOrEmpty(field))
+                            {
+                                fields.Add(field);
+                                field = "";
+                            }
+                            employeeList.Add(fields.ToArray());
                         }
                     }
-                    catch (Exception er)
-                    {
-                        MessageBox.Show(er.Message, "Error !", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    foreach (string[] value in employeeList)
-                    {
-                        dataGridView.Rows.Add(value[0], value[1], value[2], value[3], value[4], value[5], value[6], value[7], value[8], value[9]);
-                    }
                 }
-
+                catch (Exception er)
+                {
+                    MessageBox.Show(er.Message, "Error !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                foreach (var value in employeeList)
+                {
+                    dataGridView.Rows.Add(value[0], value[1], value[2], value[3], value[4], value[5], value[6], value[7], value[8], value[9]);
+                }
             }
 
         }

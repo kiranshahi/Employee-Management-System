@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Data.Entity;
 using System.Drawing;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using EmployeeManagementSystem.Data;
 
 namespace EmployeeManagementSystem1
 {
@@ -15,14 +19,14 @@ namespace EmployeeManagementSystem1
 
     public partial class AddEmployee : Form
     {
-        private bool _dragging = false;
-        private Point _start_point = new Point(0, 0);
+        private bool _dragging;
+        private Point _startPoint = new Point(0, 0);
 
         //Delegate has been added
         public delegate void IdentityHandler(object sender, IdentityEventArgs e);
 
         
-        //Event of the delegate type has been added. i.e. Oject of delegate created
+        //Event of the delegate type has been added. i.e. Object of delegate created
         public event IdentityHandler IdentityUpdated;
 
         public AddEmployee()
@@ -59,16 +63,14 @@ namespace EmployeeManagementSystem1
         private void OnMouseDown(object sender, MouseEventArgs e)
         {
             _dragging = true;
-            _start_point = new Point(e.X, e.Y);
+            _startPoint = new Point(e.X, e.Y);
         }
 
         private void OnMouseMove(object sender, MouseEventArgs e)
         {
-            if (_dragging)
-            {
-                Point p = PointToScreen(e.Location);
-                Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
-            }
+            if (!_dragging) return;
+            var p = PointToScreen(e.Location);
+            Location = new Point(p.X - this._startPoint.X, p.Y - this._startPoint.Y);
         }
 
         private void OnMouseUp(object sender, MouseEventArgs e)
@@ -81,25 +83,31 @@ namespace EmployeeManagementSystem1
             this.Close();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private async void btnSave_Click(object sender, EventArgs e)
         {
-            string id = txtIdNo.Text;
-            string name = txtFullName.Text;
-            string address = txtAddress.Text;
-            string contactNo = txtContact.Text;
-            string email = txtEmail.Text;
-            string desigination = txtDesignation.Text;
-            string department = comboBoxDepartment.Text;
-            string dateOfJoin = dateTimePicker.Text;
-            string wageRate = txtWage.Text;
-            string hourWorked = txtWorkedHour.Text;
+            var id = txtIdNo.Text;
+            var name = txtFullName.Text;
+            var address = txtAddress.Text;
+            var contactNo = txtContact.Text;
+            var email = txtEmail.Text;
+            var desigination = txtDesignation.Text;
+            var department = comboBoxDepartment.Text;
+            var dateOfJoin = dateTimePicker.Text;
+            var wageRate = txtWage.Text;
+            var hourWorked = txtWorkedHour.Text;
 
+            using (var context = new EmployeeManagementContext())
+            {
+                var emp = new Employee(name, address, contactNo, email, desigination, department, dateOfJoin, wageRate, hourWorked);
+                context.Employees.Add(emp);
+                await context.SaveChangesAsync();
+            }
 
-            //intance event args and value has been passed 
-            IdentityEventArgs args = new IdentityEventArgs(id, name, address, contactNo, email, desigination, department, dateOfJoin, wageRate, hourWorked);
+            //instance event args and value has been passed 
+            var args = new IdentityEventArgs(id, name, address, contactNo, email, desigination, department, dateOfJoin, wageRate, hourWorked);
 
             //Event has be raised with update arguments of delegate
-            IdentityUpdated(this, args);
+            IdentityUpdated?.Invoke(this, args);
 
             this.Hide();
         }
