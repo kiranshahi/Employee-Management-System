@@ -98,7 +98,7 @@ namespace EmployeeManagementSystem1
 
             using (var context = new EmployeeManagementContext())
             {
-                var emp = new Employee(name, address, contactNo, email, desigination, department, dateOfJoin, wageRate, hourWorked);
+                var emp = new Employee(id, name, address, contactNo, email, desigination, department, dateOfJoin, wageRate, hourWorked);
                 context.Employees.Add(emp);
                 await context.SaveChangesAsync();
             }

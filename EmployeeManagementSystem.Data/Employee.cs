@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EmployeeManagementSystem.Data
 {
@@ -9,11 +10,10 @@ namespace EmployeeManagementSystem.Data
         {
         }
 
-        public Employee(string fullName, string address, string contact, string email, string designation, string department, string dateOfJoin,
-            string wageRate, string workedHour, string id = null)
+        public Employee(string id, string fullName, string address, string contact, string email, string designation, string department, string dateOfJoin,
+            string wageRate, string workedHour)
         {
-            this.Id = string.IsNullOrEmpty(id) ? Guid.NewGuid()
-                .ToString() : id;
+            this.EmployeeID = id;
             this.FullName = fullName;
             this.Address = address;
             this.Contact = contact;
@@ -26,9 +26,9 @@ namespace EmployeeManagementSystem.Data
         }
 
         [Key]
-        [Required]
-        public string Id { get; set; }
-
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid Id { get; set; }
+        public string EmployeeID { get; set; }
         public string FullName { get; set; }
         public string Address { get; set; }
         public string Contact { get; set; }

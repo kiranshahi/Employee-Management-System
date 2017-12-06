@@ -196,7 +196,7 @@ namespace EmployeeManagementSystem1
          * This method will help to import CSV file and set the values on dataGridView
          * 
          * **/
-        public void ImportEmployeeFromCsv()
+        public async void ImportEmployeeFromCsv()
         {
             using (var openFileDialog1 = new OpenFileDialog() { Filter = "CSV|*.csv", ValidateNames = true, Multiselect = false })
             {
@@ -273,7 +273,21 @@ namespace EmployeeManagementSystem1
                 }
                 foreach (var value in employeeList)
                 {
-                    dataGridView.Rows.Add(value[0], value[1], value[2], value[3], value[4], value[5], value[6], value[7], value[8], value[9]);
+                    using (var context = new EmployeeManagementContext())
+                    {
+                        dataGridView.Rows.Add(value[0], value[1], value[2], value[3], value[4], value[5], value[6], value[7], value[8], value[9]);
+                        var emp = new Employee(value[0], value[1], value[2], value[3], value[4], value[5], value[6], value[7], value[8], value[9]);
+                        context.Employees.Add(emp);
+                        try
+                        {
+                            await context.SaveChangesAsync();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message, "Error !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        
+                    }
                 }
             }
 
@@ -290,7 +304,7 @@ namespace EmployeeManagementSystem1
                     {
                         var count = dataGridView.Rows.Count - 1;
                         dataGridView.Rows.Add();
-                        dataGridView.Rows[count].Cells[0].Value = emp.Id;
+                        dataGridView.Rows[count].Cells[0].Value = emp.EmployeeID;
                         dataGridView.Rows[count].Cells[1].Value = emp.FullName;
                         dataGridView.Rows[count].Cells[2].Value = emp.Address;
                         dataGridView.Rows[count].Cells[3].Value = emp.Contact;
