@@ -49,44 +49,39 @@ Some of the features of this system are:
 ---
 ### Screenshots
 
-![alt text][homeScreen]
+![Home Screen of Employee Management System][homeScreen]
 
-[homeScreen]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Home%20Screen.PNG "Home Screen of System"
-
-
-![alt text][importCSV]
-
-[importCSV]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Import%20CSV.PNG "Import CSV file"
+[homeScreen]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Home%20Screen.PNG "Home Screen of Employee Management System"
 
 
-![alt text][employeeDetails]
+![Import CSV file on Employee Management System][importCSV]
 
-[employeeDetails]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Employee%20Details.PNG "Employee Details"
-
-
-![alt text][addEmployee]
-
-[addEmployee]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Add%20Employee.PNG "Add Employee Form"
+[importCSV]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Import%20CSV.PNG "Import CSV file on Employee Management System"
 
 
-![alt text][editEmployee]
+![Employee Details on Employee Management System][employeeDetails]
 
-[editEmployee]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Edit%20Employee.PNG "Edit Employee Form"
-
-
-![alt text][generatePayroll]
-
-[generatePayroll]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Payroll.PNG "Generate Pay Roll"
+[employeeDetails]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Employee%20Details.PNG "Employee Details on Employee Management System"
 
 
-![alt text][generatePiechart]
+![Add Employee Form of Employee Management System][addEmployee]
 
-[generatePiechart]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/report.PNG "Generate Pie-chart"
+[addEmployee]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Add%20Employee.PNG "Add Employee Form of Employee Management System"
+
+
+![Edit Employee Form of Employee Management System][editEmployee]
+
+[editEmployee]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Edit%20Employee.PNG "Edit Employee Form of Employee Management System"
+
+
+![Generate Pay Roll on Employee Management System][generatePayroll]
+
+[generatePayroll]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Payroll.PNG "Generate Pay Roll on Employee Management System"
+
+
+![Generate Pie-chart on Employee Management System][generatePiechart]
+
+[generatePiechart]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/report.PNG "Generate Pie-chart on Employee Management System"
 
 ---
-You can download and manipulate the code for learning purpose.
-
-
-If you have any feedback. Please contact me.
-
-<http://www.kirans.com.np>
+**Please feel free to download source code and play with it. Happy coding!!! ** :) 
