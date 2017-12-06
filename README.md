@@ -79,9 +79,9 @@ Some of the features of this system are:
 [generatePayroll]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/Payroll.PNG "Generate Pay Roll on Employee Management System"
 
 
-![Generate Pie-chart on Employee Management System][generatePiechart]
+![Generate Pie-chart on Employee Management system][generatePiechart]
 
 [generatePiechart]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/report.PNG "Generate Pie-chart on Employee Management System"
 
 ---
-**Please feel free to download source code and play with it. Happy coding!!! ** :) 
+**Please feel free to download source code and play with it. Happy coding!!!** :blush: 
