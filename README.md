@@ -1,5 +1,11 @@
 # Employee Management System
 
+
+---
+### Do you want to contribute?
+
+[Here is the guidelines on how to contribute on this project.](https://github.com/kiranshahi/Employee-Management-System/blob/master/CONTRIBUTING.md "Contribution guidelines for Employee Management System")
+
 ---
 
 Employee Management System has been developed as coursework of **Application Development** module.
