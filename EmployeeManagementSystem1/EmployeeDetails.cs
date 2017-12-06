@@ -1,7 +1,10 @@
-﻿using System;
+﻿using EmployeeManagementSystem.Data;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace EmployeeManagementSystem1
@@ -21,6 +24,7 @@ namespace EmployeeManagementSystem1
         public EmployeeSysMainForm()
         {
             InitializeComponent();
+            GetEmployees();
         }
 
         private void lblClose_Click(object sender, EventArgs e)
@@ -273,6 +277,33 @@ namespace EmployeeManagementSystem1
                 }
             }
 
+        }
+
+        public void GetEmployees()
+        {
+            using(var context = new EmployeeManagementContext())
+            {
+                List<Employee> employees = context.Employees.ToList<Employee>();
+                if (employees.Count > 1)
+                {
+                    foreach (Employee emp in employees)
+                    {
+                        var count = dataGridView.Rows.Count - 1;
+                        dataGridView.Rows.Add();
+                        dataGridView.Rows[count].Cells[0].Value = emp.Id;
+                        dataGridView.Rows[count].Cells[1].Value = emp.FullName;
+                        dataGridView.Rows[count].Cells[2].Value = emp.Address;
+                        dataGridView.Rows[count].Cells[3].Value = emp.Contact;
+                        dataGridView.Rows[count].Cells[4].Value = emp.Email;
+                        dataGridView.Rows[count].Cells[5].Value = emp.Designation;
+                        dataGridView.Rows[count].Cells[6].Value = emp.Department;
+                        dataGridView.Rows[count].Cells[7].Value = emp.DateOfJoin;
+                        dataGridView.Rows[count].Cells[8].Value = emp.WageRate;
+                        dataGridView.Rows[count].Cells[9].Value = emp.WorkedHour;
+                        count++;
+                    }
+                }
+            }
         }
     }
 }
