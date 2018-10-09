@@ -20,7 +20,7 @@ The main objectives of this project are:
 
 
 
-2. Learn Windows from appliaction.
+2. Learn Windows Form Application.
 
 ---
 
@@ -34,7 +34,7 @@ Some of the features of this system are:
 2. System users can `import employee details using CSV file`.
 
 
-3. System users can `edit and updetails employee details` (Employee details will be updated only in dataGridView).
+3. System users can `edit and update employee details` (Employee details will be updated only in dataGridView).
 
 
 4. System users can `calculate the total wage` based on worked hour and hourly wage rate.
