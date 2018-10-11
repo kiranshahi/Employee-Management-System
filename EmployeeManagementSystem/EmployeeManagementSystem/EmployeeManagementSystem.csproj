@@ -7,8 +7,8 @@
     <ProjectGuid>{5556CBD3-0B21-4B40-9E8B-ECE89A9A0536}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EmployeeManagementSystem1</RootNamespace>
-    <AssemblyName>EmployeeManagementSystem1</AssemblyName>
+    <RootNamespace>EmployeeManagementSystem</RootNamespace>
+    <AssemblyName>EmployeeManagementSystem</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,18 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,48 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddEmployee.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddEmployee.Designer.cs">
-      <DependentUpon>AddEmployee.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="CalculateTotalWage.cs" />
-    <Compile Include="DisplayChart.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DisplayChart.Designer.cs">
-      <DependentUpon>DisplayChart.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EmployeeDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EmployeeDetails.Designer.cs">
-      <DependentUpon>EmployeeDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Employees.cs" />
-    <Compile Include="GeneratePayRoll.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GeneratePayRoll.Designer.cs">
-      <DependentUpon>GeneratePayRoll.cs</DependentUpon>
-    </Compile>
-    <Compile Include="IdentityEventArgs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddEmployee.resx">
-      <DependentUpon>AddEmployee.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DisplayChart.resx">
-      <DependentUpon>DisplayChart.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeDetails.resx">
-      <DependentUpon>EmployeeDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GeneratePayRoll.resx">
-      <DependentUpon>GeneratePayRoll.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -107,7 +63,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -120,12 +75,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EmployeeManagementSystem.Data\EmployeeManagementSystem.Data.csproj">
-      <Project>{1a471269-5b51-440e-9718-bd029d860eab}</Project>
-      <Name>EmployeeManagementSystem.Data</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

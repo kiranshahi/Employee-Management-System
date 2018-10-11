@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace EmployeeManagementSystem1
+namespace EmployeeManagementSystem
 {
     public partial class DisplayChart : Form
     {

@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Data.Entity;
 using System.Drawing;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using EmployeeManagementSystem.Data;
 
-namespace EmployeeManagementSystem1
+namespace EmployeeManagementSystem
 {
     /***********
      * *

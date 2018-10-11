@@ -1,13 +1,12 @@
-﻿using EmployeeManagementSystem.Data;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using EmployeeManagementSystem.Data;
 
-namespace EmployeeManagementSystem1
+namespace EmployeeManagementSystem
 {
     /***********
      * *

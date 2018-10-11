@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EmployeeManagementSystem1
+namespace EmployeeManagementSystem
 {
     /*******
      * 

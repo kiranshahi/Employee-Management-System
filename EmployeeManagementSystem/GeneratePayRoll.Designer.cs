@@ -1,4 +1,4 @@
-﻿namespace EmployeeManagementSystem1
+﻿namespace EmployeeManagementSystem
 {
     partial class GeneratePayRoll
     {
