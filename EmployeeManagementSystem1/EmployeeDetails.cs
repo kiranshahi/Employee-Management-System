@@ -98,6 +98,11 @@ namespace EmployeeManagementSystem1
             ImportEmployeeFromCsv();
         }
 
+        private void exportData_Click(object sender, EventArgs e)
+        {
+            ExportDataToCSV();
+        }
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
             try
@@ -289,6 +294,30 @@ namespace EmployeeManagementSystem1
                         
                     }
                 }
+            }
+
+        }
+
+        public async void ExportDataToCSV()
+        {
+            var csv = new System.Text.StringBuilder();
+
+            using (var context = new EmployeeManagementContext())
+            {
+                foreach(var employee in context.Employees)
+                {
+                    var newLine = string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9}", employee.EmployeeID, employee.FullName, employee.Address, employee.Contact, employee.Email, employee.Designation, employee.Department, employee.DateOfJoin, employee.WageRate, employee.WorkedHour);
+
+                    csv.AppendLine(newLine);
+                }
+            }
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Title = "Save Employee Data";
+            saveFileDialog.Filter = "CSV file(*.csv)|*.csv";
+
+            if(saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                File.WriteAllText(saveFileDialog.FileName, csv.ToString());
             }
 
         }
