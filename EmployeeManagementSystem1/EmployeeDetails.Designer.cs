@@ -37,6 +37,7 @@
             this.picBoxLogo = new System.Windows.Forms.PictureBox();
             this.lblLogo = new System.Windows.Forms.Label();
             this.importEmployees = new System.Windows.Forms.Button();
+            this.exportData = new System.Windows.Forms.Button();
             this.headerPanel = new System.Windows.Forms.Panel();
             this.header = new System.Windows.Forms.Label();
             this.lblMinimize = new System.Windows.Forms.Label();
@@ -203,6 +204,28 @@
             this.importEmployees.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
             this.importEmployees.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
             // 
+            // exportData
+            // 
+            this.exportData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(151)))), ((int)(((byte)(31)))));
+            this.exportData.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.exportData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exportData.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
+            this.exportData.FlatAppearance.BorderSize = 0;
+            this.exportData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exportData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exportData.ForeColor = System.Drawing.Color.White;
+            this.exportData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.exportData.Location = new System.Drawing.Point(480, 453);
+            this.exportData.Name = "exportData";
+            this.exportData.Size = new System.Drawing.Size(134, 40);
+            this.exportData.TabIndex = 1;
+            this.exportData.Text = "Export Data";
+            this.exportData.UseVisualStyleBackColor = false;
+            this.exportData.Click += new System.EventHandler(this.exportData_Click);
+            this.exportData.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
+            this.exportData.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
+            this.exportData.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
+            // 
             // headerPanel
             // 
             this.headerPanel.BackColor = System.Drawing.Color.White;
@@ -275,6 +298,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.dataGridView);
+            this.panel1.Controls.Add(this.exportData);
             this.panel1.Controls.Add(this.importEmployees);
             this.panel1.Controls.Add(this.btnEdit);
             this.panel1.Controls.Add(this.btnDelete);
@@ -461,6 +485,7 @@
         private System.Windows.Forms.Label lblLogo;
         private System.Windows.Forms.Button payroll;
         private System.Windows.Forms.Button importEmployees;
+        private System.Windows.Forms.Button exportData;
         private System.Windows.Forms.Button addEmployee;
         private System.Windows.Forms.Label header;
         private System.Windows.Forms.Panel containerPanel;
