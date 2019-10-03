@@ -57,15 +57,8 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Documentation\Code First to an Existing Database.md" />
+    <None Include="packages.config" />
     <None Include="Documentation\Code First to a New Database.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="EntityFramework">
-      <Version>6.1.3</Version>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="employee-management-systemCore.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
