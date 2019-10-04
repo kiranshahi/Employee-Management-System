@@ -326,7 +326,7 @@ namespace EmployeeManagementSystem
             using(var context = new EmployeeManagementContext())
             {
                 List<Employee> employees = context.Employees.ToList<Employee>();
-                if (employees.Count > 1)
+                if (employees.Count > 0)
                 {
                     foreach (Employee emp in employees)
                     {
