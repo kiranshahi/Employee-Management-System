@@ -168,6 +168,7 @@
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(280, 31);
             this.txtFullName.TabIndex = 42;
+            this.txtFullName.TextChanged += new System.EventHandler(this.txtFullName_TextChanged);
             this.txtFullName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
             this.txtFullName.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
             this.txtFullName.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
