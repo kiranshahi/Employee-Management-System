@@ -108,5 +108,24 @@ namespace EmployeeManagementSystem
 
             this.Hide();
         }
+
+        //This method valid the textoBox full name, if you put a number it return an error
+        private bool Validation(TextBox t, string name)
+        {
+            int n;
+            bool error = false;
+
+            if (int.TryParse(t.Text, out n))
+            {
+                error = true;
+                MessageBox.Show("Invalid character", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return error;
+
+        }
+        private void txtFullName_TextChanged(object sender, EventArgs e)
+        {
+            Validation(txtFullName, "Full name");
+        }
     }
 }
