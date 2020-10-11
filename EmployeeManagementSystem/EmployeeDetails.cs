@@ -118,23 +118,27 @@ namespace EmployeeManagementSystem
         {
             try
             {
-                var row = dataGridView.CurrentCell.RowIndex;
-                var id = Convert.ToString(dataGridView.Rows[row].Cells[0].Value);
-                var name = Convert.ToString(dataGridView.Rows[row].Cells[1].Value);
-                var address = Convert.ToString(dataGridView.Rows[row].Cells[2].Value);
-                var contact = Convert.ToString(dataGridView.Rows[row].Cells[3].Value);
-                var email = Convert.ToString(dataGridView.Rows[row].Cells[4].Value);
-                var desigination = Convert.ToString(dataGridView.Rows[row].Cells[5].Value);
-                var department = Convert.ToString(dataGridView.Rows[row].Cells[6].Value);
-                var dateOfJoin = Convert.ToString(dataGridView.Rows[row].Cells[7].Value);
-                var wageRate = Convert.ToString(dataGridView.Rows[row].Cells[8].Value);
-                var hourWorked = Convert.ToString(dataGridView.Rows[row].Cells[9].Value);
+                var currentCell = dataGridView.CurrentCell;
+                if (currentCell != null)
+                {
+                    var row = dataGridView.CurrentCell.RowIndex;
+                    var id = Convert.ToString(dataGridView.Rows[row].Cells[0].Value);
+                    var name = Convert.ToString(dataGridView.Rows[row].Cells[1].Value);
+                    var address = Convert.ToString(dataGridView.Rows[row].Cells[2].Value);
+                    var contact = Convert.ToString(dataGridView.Rows[row].Cells[3].Value);
+                    var email = Convert.ToString(dataGridView.Rows[row].Cells[4].Value);
+                    var desigination = Convert.ToString(dataGridView.Rows[row].Cells[5].Value);
+                    var department = Convert.ToString(dataGridView.Rows[row].Cells[6].Value);
+                    var dateOfJoin = Convert.ToString(dataGridView.Rows[row].Cells[7].Value);
+                    var wageRate = Convert.ToString(dataGridView.Rows[row].Cells[8].Value);
+                    var hourWorked = Convert.ToString(dataGridView.Rows[row].Cells[9].Value);
 
 
-                var addEmp = new AddEmployee();
-                addEmp.LoadData(id, name, address, contact, email, desigination, department, dateOfJoin, wageRate, hourWorked);
-                addEmp.IdentityUpdated += this.UpdateRecord;
-                addEmp.ShowDialog();
+                    var addEmp = new AddEmployee();
+                    addEmp.LoadData(id, name, address, contact, email, desigination, department, dateOfJoin, wageRate, hourWorked);
+                    addEmp.IdentityUpdated += this.UpdateRecord;
+                    addEmp.ShowDialog();
+                }
             }
             catch (Exception exception)
             {
