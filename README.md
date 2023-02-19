@@ -87,4 +87,9 @@ Some of the features of this system are:
 [generatePiechart]: https://github.com/kiranshahi/Employee-Management-System/blob/master/Screenshots/report.PNG "Generate Pie-chart on Employee Management System"
 
 ---
+### Dependencies
+- [.NET Framework 7.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
+- [Maikebing.System.Windows.Forms.DataVisualization 5.0.1](https://www.nuget.org/packages/Maikebing.System.Windows.Forms.DataVisualization/5.0.1?_src=template)
+- [Microsoft.EntityFrameworkCore 7.0.3](https://learn.microsoft.com/en-us/ef/core/)
+---
 **Please feel free to download source code and play with it. Happy coding!!!** :blush: 
