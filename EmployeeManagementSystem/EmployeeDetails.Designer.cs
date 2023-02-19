@@ -100,7 +100,7 @@
             this.btnGenerateReport.Text = "Generate Report";
             this.btnGenerateReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGenerateReport.UseVisualStyleBackColor = true;
-            this.btnGenerateReport.Click += new System.EventHandler(this.btnGenerateReport_Click);
+            this.btnGenerateReport.Click += new System.EventHandler(this.BtnGenerateReport_Click);
             // 
             // payroll
             // 
@@ -119,7 +119,7 @@
             this.payroll.Text = "Generate Payroll";
             this.payroll.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.payroll.UseVisualStyleBackColor = true;
-            this.payroll.Click += new System.EventHandler(this.payroll_Click);
+            this.payroll.Click += new System.EventHandler(this.Payroll_Click);
             // 
             // addEmployee
             // 
@@ -138,7 +138,7 @@
             this.addEmployee.Text = "Add Employee";
             this.addEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.addEmployee.UseVisualStyleBackColor = true;
-            this.addEmployee.Click += new System.EventHandler(this.addEmployee_Click);
+            this.addEmployee.Click += new System.EventHandler(this.AddEmployee_Click);
             // 
             // logoPanel
             // 
@@ -199,7 +199,7 @@
             this.importEmployees.TabIndex = 1;
             this.importEmployees.Text = "Import Data";
             this.importEmployees.UseVisualStyleBackColor = false;
-            this.importEmployees.Click += new System.EventHandler(this.importEmployees_Click);
+            this.importEmployees.Click += new System.EventHandler(this.ImportEmployees_Click);
             this.importEmployees.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
             this.importEmployees.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
             this.importEmployees.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
@@ -221,7 +221,7 @@
             this.exportData.TabIndex = 1;
             this.exportData.Text = "Export Data";
             this.exportData.UseVisualStyleBackColor = false;
-            this.exportData.Click += new System.EventHandler(this.exportData_Click);
+            this.exportData.Click += new System.EventHandler(this.ExportData_Click);
             this.exportData.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
             this.exportData.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
             this.exportData.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
@@ -266,7 +266,7 @@
             this.lblMinimize.Size = new System.Drawing.Size(19, 25);
             this.lblMinimize.TabIndex = 1;
             this.lblMinimize.Text = "-";
-            this.lblMinimize.Click += new System.EventHandler(this.lblMinimize_Click);
+            this.lblMinimize.Click += new System.EventHandler(this.LblMinimize_Click);
             this.lblMinimize.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
             this.lblMinimize.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
             this.lblMinimize.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
@@ -281,7 +281,7 @@
             this.lblClose.Size = new System.Drawing.Size(23, 25);
             this.lblClose.TabIndex = 0;
             this.lblClose.Text = "x";
-            this.lblClose.Click += new System.EventHandler(this.lblClose_Click);
+            this.lblClose.Click += new System.EventHandler(this.LblClose_Click);
             this.lblClose.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
             this.lblClose.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
             this.lblClose.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
@@ -417,7 +417,7 @@
             this.btnEdit.TabIndex = 6;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             this.btnEdit.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
             this.btnEdit.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
             this.btnEdit.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
@@ -439,7 +439,7 @@
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             this.btnDelete.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
             this.btnDelete.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
             this.btnDelete.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
