@@ -6,7 +6,7 @@ Do you want to contribute to this project? Here are some of the guidelines on ho
 
 * Fork repo
 
-  [Fork](https://github.com/kiranshahi/Employee-Management-System/Fork) the repository to your account so that you have your copy of the system.
+  [Fork](https://github.com/kiranshahi/Employee-Management-System/fork) the repository to your account so that you have your copy of the system.
 
 * Clone repo
 
