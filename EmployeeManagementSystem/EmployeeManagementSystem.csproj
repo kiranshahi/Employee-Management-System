@@ -10,19 +10,6 @@
     <ProjectReference Include="..\EmployeeManagementSystem.Data\EmployeeManagementSystem.Data.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.410601">
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.410601">
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
-    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
-    <PackageReference Include="System.Windows.Forms.DataVisualization" Version="1.0.0-prerelease.20110.1" />
-    <PackageReference Include="EntityFramework" Version="6.4.4" />
-    <PackageReference Include="Microsoft.Windows.Compatibility" Version="7.0.0" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Remove="EmployeeManagementSystem\Form1.cs" />
     <Compile Remove="EmployeeManagementSystem\Form1.Designer.cs" />
     <Compile Remove="EmployeeManagementSystem\Program.cs" />
@@ -30,5 +17,8 @@
     <Compile Remove="EmployeeManagementSystem\Properties\Resources.Designer.cs" />
     <Compile Remove="EmployeeManagementSystem\Properties\Settings.Designer.cs" />
     <EmbeddedResource Remove="EmployeeManagementSystem\Properties\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Maikebing.System.Windows.Forms.DataVisualization" Version="5.0.1" />
   </ItemGroup>
 </Project>

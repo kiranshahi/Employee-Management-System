@@ -17,7 +17,7 @@ namespace EmployeeManagementSystem
     public partial class EmployeeSysMainForm : Form
     {
         private bool _dragging;
-        private Point _startPoint = new Point(0, 0);
+        private Point _startPoint = new(0, 0);
         private int _row; 
 
         public EmployeeSysMainForm()
@@ -26,7 +26,7 @@ namespace EmployeeManagementSystem
             GetEmployees();
         }
 
-        private void lblClose_Click(object sender, EventArgs e)
+        private void LblClose_Click(object sender, EventArgs e)
         {
             const string message = "You are about to close application. Are you sure you want to continue?";
             const string caption = "Confirm close";
@@ -37,7 +37,7 @@ namespace EmployeeManagementSystem
                 this.Close();
         }
 
-        private void lblMinimize_Click(object sender, EventArgs e)
+        private void LblMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
@@ -61,7 +61,7 @@ namespace EmployeeManagementSystem
         }
 
 
-        private void addEmployee_Click(object sender, EventArgs e)
+        private void AddEmployee_Click(object sender, EventArgs e)
         {
             var addEmp = new AddEmployee();
             addEmp.IdentityUpdated += this.SaveRecord;
@@ -92,17 +92,17 @@ namespace EmployeeManagementSystem
             }
         }
 
-        private void importEmployees_Click(object sender, EventArgs e)
+        private void ImportEmployees_Click(object sender, EventArgs e)
         {
             ImportEmployeeFromCsv();
         }
 
-        private void exportData_Click(object sender, EventArgs e)
+        private void ExportData_Click(object sender, EventArgs e)
         {
             ExportDataToCSV();
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
             try
             {
@@ -114,7 +114,7 @@ namespace EmployeeManagementSystem
             }
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void BtnEdit_Click(object sender, EventArgs e)
         {
             try
             {
@@ -157,7 +157,7 @@ namespace EmployeeManagementSystem
 
         }
 
-        private void payroll_Click(object sender, EventArgs e)
+        private void Payroll_Click(object sender, EventArgs e)
         {
             GeneratePayroll();
         }
@@ -188,7 +188,7 @@ namespace EmployeeManagementSystem
             }
         }
 
-        private void btnGenerateReport_Click(object sender, EventArgs e)
+        private void BtnGenerateReport_Click(object sender, EventArgs e)
         {
             var report = new DisplayChart(dataGridView);
             report.ShowDialog();
@@ -211,50 +211,32 @@ namespace EmployeeManagementSystem
                 var employeeList = new List<string[]>();
                 try
                 {
-                    using (Stream stream = null)
+                    using Stream stream = null;
+                    var rows = File.ReadAllLines(openFileDialog1.FileName);
+                    foreach (var csvRow in rows)
                     {
-                        var rows = File.ReadAllLines(openFileDialog1.FileName);
-                        foreach (var csvRow in rows)
+                        var inQuotes = false;
+                        var fields = new List<string>();
+                        var field = "";
+                        for (var i = 0; i < csvRow.Length; i++)
                         {
-                            var inQuotes = false;
-                            var fields = new List<string>();
-                            var field = "";
-                            for (var i = 0; i < csvRow.Length; i++)
+                            if (inQuotes)
                             {
-                                if (inQuotes)
+                                if (i < csvRow.Length - 1 && csvRow[i] == quoteChar && csvRow[i + 1] == quoteChar)
                                 {
-                                    if (i < csvRow.Length - 1 && csvRow[i] == quoteChar && csvRow[i + 1] == quoteChar)
-                                    {
-                                        i = i++;
-                                        field += quoteChar;
-                                    }
-                                    else if (csvRow[i] == quoteChar)
-                                    {
-                                        inQuotes = false;
-                                    }
-                                    else
-                                    {
-                                        if (csvRow[i - 1] == quoteChar)
-                                        {
-                                            field = "";
-                                            field += csvRow[i];
-                                        }
-                                        else
-                                        {
-                                            field += csvRow[i];
-                                        }
-                                    }
+                                    i = i++;
+                                    field += quoteChar;
+                                }
+                                else if (csvRow[i] == quoteChar)
+                                {
+                                    inQuotes = false;
                                 }
                                 else
                                 {
-                                    if (csvRow[i] == quoteChar)
+                                    if (csvRow[i - 1] == quoteChar)
                                     {
-                                        inQuotes = true;
-                                    }
-                                    if (csvRow[i] == sepChar)
-                                    {
-                                        fields.Add(field);
                                         field = "";
+                                        field += csvRow[i];
                                     }
                                     else
                                     {
@@ -262,13 +244,29 @@ namespace EmployeeManagementSystem
                                     }
                                 }
                             }
-                            if (!string.IsNullOrEmpty(field))
+                            else
                             {
-                                fields.Add(field);
-                                field = "";
+                                if (csvRow[i] == quoteChar)
+                                {
+                                    inQuotes = true;
+                                }
+                                if (csvRow[i] == sepChar)
+                                {
+                                    fields.Add(field);
+                                    field = "";
+                                }
+                                else
+                                {
+                                    field += csvRow[i];
+                                }
                             }
-                            employeeList.Add(fields.ToArray());
                         }
+                        if (!string.IsNullOrEmpty(field))
+                        {
+                            fields.Add(field);
+                            field = "";
+                        }
+                        employeeList.Add(fields.ToArray());
                     }
                 }
                 catch (Exception er)
@@ -277,20 +275,17 @@ namespace EmployeeManagementSystem
                 }
                 foreach (var value in employeeList)
                 {
-                    using (var context = new EmployeeManagementContext())
+                    using var context = new EmployeeManagementContext();
+                    dataGridView.Rows.Add(value[0], value[1], value[2], value[3], value[4], value[5], value[6], value[7], value[8], value[9]);
+                    var emp = new Employee(value[0], value[1], value[2], value[3], value[4], value[5], value[6], value[7], value[8], value[9]);
+                    context.Employees.Add(emp);
+                    try
                     {
-                        dataGridView.Rows.Add(value[0], value[1], value[2], value[3], value[4], value[5], value[6], value[7], value[8], value[9]);
-                        var emp = new Employee(value[0], value[1], value[2], value[3], value[4], value[5], value[6], value[7], value[8], value[9]);
-                        context.Employees.Add(emp);
-                        try
-                        {
-                            await context.SaveChangesAsync();
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message, "Error !", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        
+                        await context.SaveChangesAsync();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -310,11 +305,13 @@ namespace EmployeeManagementSystem
                     csv.AppendLine(newLine);
                 }
             }
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Title = "Save Employee Data";
-            saveFileDialog.Filter = "CSV file(*.csv)|*.csv";
+            SaveFileDialog saveFileDialog = new()
+            {
+                Title = "Save Employee Data",
+                Filter = "CSV file(*.csv)|*.csv"
+            };
 
-            if(saveFileDialog.ShowDialog() == DialogResult.OK)
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 File.WriteAllText(saveFileDialog.FileName, csv.ToString());
             }
@@ -323,27 +320,24 @@ namespace EmployeeManagementSystem
 
         public void GetEmployees()
         {
-            using(var context = new EmployeeManagementContext())
+            using var context = new EmployeeManagementContext();
+            List<Employee> employees = context.Employees.ToList<Employee>();
+            if (employees.Count > 1)
             {
-                List<Employee> employees = context.Employees.ToList<Employee>();
-                if (employees.Count > 1)
+                foreach (Employee emp in employees)
                 {
-                    foreach (Employee emp in employees)
-                    {
-                        var count = dataGridView.Rows.Count - 1;
-                        dataGridView.Rows.Add();
-                        dataGridView.Rows[count].Cells[0].Value = emp.EmployeeID;
-                        dataGridView.Rows[count].Cells[1].Value = emp.FullName;
-                        dataGridView.Rows[count].Cells[2].Value = emp.Address;
-                        dataGridView.Rows[count].Cells[3].Value = emp.Contact;
-                        dataGridView.Rows[count].Cells[4].Value = emp.Email;
-                        dataGridView.Rows[count].Cells[5].Value = emp.Designation;
-                        dataGridView.Rows[count].Cells[6].Value = emp.Department;
-                        dataGridView.Rows[count].Cells[7].Value = emp.DateOfJoin;
-                        dataGridView.Rows[count].Cells[8].Value = emp.WageRate;
-                        dataGridView.Rows[count].Cells[9].Value = emp.WorkedHour;
-                        count++;
-                    }
+                    var count = dataGridView.Rows.Count - 1;
+                    dataGridView.Rows.Add();
+                    dataGridView.Rows[count].Cells[0].Value = emp.EmployeeID;
+                    dataGridView.Rows[count].Cells[1].Value = emp.FullName;
+                    dataGridView.Rows[count].Cells[2].Value = emp.Address;
+                    dataGridView.Rows[count].Cells[3].Value = emp.Contact;
+                    dataGridView.Rows[count].Cells[4].Value = emp.Email;
+                    dataGridView.Rows[count].Cells[5].Value = emp.Designation;
+                    dataGridView.Rows[count].Cells[6].Value = emp.Department;
+                    dataGridView.Rows[count].Cells[7].Value = emp.DateOfJoin;
+                    dataGridView.Rows[count].Cells[8].Value = emp.WageRate;
+                    dataGridView.Rows[count].Cells[9].Value = emp.WorkedHour;
                 }
             }
         }
