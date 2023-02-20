@@ -34,7 +34,7 @@ namespace EmployeeManagementSystem
                                      MessageBoxButtons.OKCancel,
                                      MessageBoxIcon.Question);
             if (result == DialogResult.OK)
-                this.Close();
+                Close();
         }
 
         private void LblMinimize_Click(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace EmployeeManagementSystem
         {
             if (!_dragging) return;
             var p = PointToScreen(e.Location);
-            Location = new Point(p.X - this._startPoint.X, p.Y - this._startPoint.Y);
+            Location = new Point(p.X - _startPoint.X, p.Y - _startPoint.Y);
         }
 
         private void OnMouseUp(object sender, MouseEventArgs e)
@@ -133,7 +133,7 @@ namespace EmployeeManagementSystem
 
                 var addEmp = new AddEmployee();
                 addEmp.LoadData(id, name, address, contact, email, desigination, department, dateOfJoin, wageRate, hourWorked);
-                addEmp.IdentityUpdated += this.UpdateRecord;
+                addEmp.IdentityUpdated += UpdateRecord;
                 addEmp.ShowDialog();
             }
             catch (Exception exception)
@@ -313,7 +313,7 @@ namespace EmployeeManagementSystem
 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                File.WriteAllText(saveFileDialog.FileName, csv.ToString());
+                await File.WriteAllTextAsync(saveFileDialog.FileName, csv.ToString());
             }
 
         }
