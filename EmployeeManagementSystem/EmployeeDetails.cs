@@ -18,7 +18,7 @@ namespace EmployeeManagementSystem
     {
         private bool _dragging;
         private Point _startPoint = new(0, 0);
-        private int _row; 
+        private int _row;
 
         public EmployeeSysMainForm()
         {
@@ -73,7 +73,7 @@ namespace EmployeeManagementSystem
             try
             {
 
-                var count = dataGridView.Rows.Count-1;
+                var count = dataGridView.Rows.Count - 1;
                 dataGridView.Rows.Add();
                 dataGridView.Rows[count].Cells[0].Value = e.Id;
                 dataGridView.Rows[count].Cells[1].Value = e.FullName;
@@ -193,7 +193,7 @@ namespace EmployeeManagementSystem
             var report = new DisplayChart(dataGridView);
             report.ShowDialog();
         }
-        
+
 
         /**
          * 
@@ -212,7 +212,7 @@ namespace EmployeeManagementSystem
                 try
                 {
                     using Stream stream = null;
-                    var rows = File.ReadAllLines(openFileDialog1.FileName);
+                    var rows = await File.ReadAllLinesAsync(openFileDialog1.FileName);
                     foreach (var csvRow in rows)
                     {
                         var inQuotes = false;
@@ -298,7 +298,7 @@ namespace EmployeeManagementSystem
 
             using (var context = new EmployeeManagementContext())
             {
-                foreach(var employee in context.Employees)
+                foreach (var employee in context.Employees)
                 {
                     var newLine = string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9}", employee.EmployeeID, employee.FullName, employee.Address, employee.Contact, employee.Email, employee.Designation, employee.Department, employee.DateOfJoin, employee.WageRate, employee.WorkedHour);
 
