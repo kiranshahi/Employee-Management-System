@@ -11,9 +11,9 @@ namespace EmployeeManagementSystem
      * *
      **********/
     partial class GeneratePayRoll : Form
-     {
+    {
         private bool _dragging = false;
-        private Point _start_point = new Point(0, 0);
+        private Point _start_point = new(0, 0);
 
 
         private List<CalculateTotalWage> list;
@@ -26,28 +26,22 @@ namespace EmployeeManagementSystem
 
         }
 
-        private void lblClose_Click(object sender, EventArgs e)
+        private void LblClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
 
         /// <summary>
         /// Method to add calculated vlues from list to dataGridView
         /// </summary>
-         public void AddEmployeeToDataGridView()
-         {
-                foreach (CalculateTotalWage emloyeeList in list)
-                {
-                    int row = payrollDataGridView.Rows.Count - 1;
-                    payrollDataGridView.Rows.Add();
-                    payrollDataGridView.Rows[row].Cells[0].Value = (emloyeeList.EmpName);
-                    payrollDataGridView.Rows[row].Cells[1].Value = (emloyeeList.EmpDepartment);
-                    payrollDataGridView.Rows[row].Cells[2].Value = (emloyeeList.EmpWageRate);
-                    payrollDataGridView.Rows[row].Cells[3].Value = (emloyeeList.EmpWorkedHours);
-                    payrollDataGridView.Rows[row].Cells[4].Value = (emloyeeList.EmpTotalWage);
-                }
-         }
+        public void AddEmployeeToDataGridView()
+        {
+            foreach (CalculateTotalWage emloyeeList in list)
+            {
+                payrollDataGridView.Rows.Add(emloyeeList.EmpName, emloyeeList.EmpDepartment, emloyeeList.EmpWageRate, emloyeeList.EmpWorkedHours, emloyeeList.EmpTotalWage);
+            }
+        }
 
         /// <summary>
         /// Method to sort rows based on TotalWage
@@ -85,7 +79,7 @@ namespace EmployeeManagementSystem
             }
         }
 
-       
+
         private void SortByTotalDescending()
         {
             int row = payrollDataGridView.Rows.Count - 1;
@@ -129,7 +123,7 @@ namespace EmployeeManagementSystem
             {
                 for (int j = i + 1; j < row; j++)
                 {
-                    if (string.Compare(payrollDataGridView.Rows[i].Cells[0].Value.ToString(), payrollDataGridView.Rows[j].Cells[0].Value.ToString())> 0)
+                    if (string.Compare(payrollDataGridView.Rows[i].Cells[0].Value.ToString(), payrollDataGridView.Rows[j].Cells[0].Value.ToString()) > 0)
                     {
                         var tempName = payrollDataGridView.Rows[i].Cells[0].Value;
                         var tempDepartment = payrollDataGridView.Rows[i].Cells[1].Value;
@@ -188,22 +182,22 @@ namespace EmployeeManagementSystem
             }
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void BtnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
-        private void lblMinimize_Click(object sender, EventArgs e)
+        private void LblMinimize_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Minimized;
         }
 
-        private void sortByTotalWageAsc_Click(object sender, EventArgs e)
+        private void SortByTotalWageAsc_Click(object sender, EventArgs e)
         {
             SortByTotalAscending();
         }
 
-        private void sortByTotalWageDsc_Click(object sender, EventArgs e)
+        private void SortByTotalWageDsc_Click(object sender, EventArgs e)
         {
             SortByTotalDescending();
         }
@@ -219,7 +213,7 @@ namespace EmployeeManagementSystem
             if (_dragging)
             {
                 Point p = PointToScreen(e.Location);
-                Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
+                Location = new Point(p.X - _start_point.X, p.Y - _start_point.Y);
             }
         }
         private void OnMouseUp(object sender, MouseEventArgs e)
@@ -227,12 +221,12 @@ namespace EmployeeManagementSystem
             _dragging = false;
         }
 
-        private void btnNameAsc_Click(object sender, EventArgs e)
+        private void BtnNameAsc_Click(object sender, EventArgs e)
         {
             SortByNameAscending();
         }
 
-        private void btnNameDsc_Click(object sender, EventArgs e)
+        private void BtnNameDsc_Click(object sender, EventArgs e)
         {
             SortByNameDescending();
         }

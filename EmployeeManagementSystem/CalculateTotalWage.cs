@@ -25,11 +25,11 @@
 
         public CalculateTotalWage(string name, string department, int rate, int workedHour)
         {
-            this.EmpName = name;
-            this.EmpDepartment = department;
-            this.EmpWageRate = rate;
-            this.EmpWorkedHours = workedHour;
-            this.EmpTotalWage = workedHour * rate;
+            EmpName = name;
+            EmpDepartment = department;
+            EmpWageRate = rate;
+            EmpWorkedHours = workedHour;
+            EmpTotalWage = workedHour * rate;
         }
     }
 }

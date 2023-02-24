@@ -73,7 +73,7 @@
             this.lblClose.Size = new System.Drawing.Size(23, 25);
             this.lblClose.TabIndex = 51;
             this.lblClose.Text = "x";
-            this.lblClose.Click += new System.EventHandler(this.lblClose_Click);
+            this.lblClose.Click += new System.EventHandler(this.LblClose_Click);
             this.lblClose.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
             this.lblClose.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
             this.lblClose.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
@@ -89,7 +89,7 @@
             this.lblMinimize.Size = new System.Drawing.Size(19, 25);
             this.lblMinimize.TabIndex = 52;
             this.lblMinimize.Text = "-";
-            this.lblMinimize.Click += new System.EventHandler(this.lblMinimize_Click);
+            this.lblMinimize.Click += new System.EventHandler(this.LblMinimize_Click);
             this.lblMinimize.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
             this.lblMinimize.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
             this.lblMinimize.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
@@ -111,7 +111,7 @@
             this.btnClose.TabIndex = 53;
             this.btnClose.Text = "Close Report";
             this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             this.btnClose.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
             this.btnClose.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
             this.btnClose.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);

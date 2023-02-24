@@ -17,7 +17,7 @@ namespace EmployeeManagementSystem
     public partial class AddEmployee : Form
     {
         private bool _dragging;
-        private Point _startPoint = new Point(0, 0);
+        private Point _startPoint = new(0, 0);
 
         //Delegate has been added
         public delegate void IdentityHandler(object sender, IdentityEventArgs e);
@@ -52,7 +52,7 @@ namespace EmployeeManagementSystem
             txtWage.Text = wageRate;
             txtWorkedHour.Text = workedHour;
         }
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void BtnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -75,12 +75,12 @@ namespace EmployeeManagementSystem
             _dragging = false;
         }
 
-        private void lblClose_Click(object sender, EventArgs e)
+        private void LblClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
-        private async void btnSave_Click(object sender, EventArgs e)
+        private async void BtnSave_Click(object sender, EventArgs e)
         {
             var id = txtIdNo.Text;
             var name = txtFullName.Text;
@@ -112,10 +112,9 @@ namespace EmployeeManagementSystem
         //This method valid the textoBox full name, if you put a number it return an error
         private bool Validation(TextBox t, string name)
         {
-            int n;
             bool error = false;
 
-            if (int.TryParse(t.Text, out n))
+            if (int.TryParse(t.Text, out int n))
             {
                 error = true;
                 MessageBox.Show("Invalid character", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -123,7 +122,7 @@ namespace EmployeeManagementSystem
             return error;
 
         }
-        private void txtFullName_TextChanged(object sender, EventArgs e)
+        private void TxtFullName_TextChanged(object sender, EventArgs e)
         {
             Validation(txtFullName, "Full name");
         }

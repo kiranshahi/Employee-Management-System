@@ -100,7 +100,7 @@
             this.btnNameDsc.Text = "Name Descending";
             this.btnNameDsc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNameDsc.UseVisualStyleBackColor = true;
-            this.btnNameDsc.Click += new System.EventHandler(this.btnNameDsc_Click);
+            this.btnNameDsc.Click += new System.EventHandler(this.BtnNameDsc_Click);
             // 
             // btnNameAsc
             // 
@@ -119,7 +119,7 @@
             this.btnNameAsc.Text = "Name Ascending";
             this.btnNameAsc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNameAsc.UseVisualStyleBackColor = true;
-            this.btnNameAsc.Click += new System.EventHandler(this.btnNameAsc_Click);
+            this.btnNameAsc.Click += new System.EventHandler(this.BtnNameAsc_Click);
             // 
             // panel3
             // 
@@ -177,7 +177,7 @@
             this.sortByTotalWageDsc.Text = "Total Wage Dsc";
             this.sortByTotalWageDsc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.sortByTotalWageDsc.UseVisualStyleBackColor = true;
-            this.sortByTotalWageDsc.Click += new System.EventHandler(this.sortByTotalWageDsc_Click);
+            this.sortByTotalWageDsc.Click += new System.EventHandler(this.SortByTotalWageDsc_Click);
             this.sortByTotalWageDsc.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
             this.sortByTotalWageDsc.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
             this.sortByTotalWageDsc.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
@@ -199,7 +199,7 @@
             this.sortByTotalWageAsc.Text = "Total Wage Asc";
             this.sortByTotalWageAsc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.sortByTotalWageAsc.UseVisualStyleBackColor = true;
-            this.sortByTotalWageAsc.Click += new System.EventHandler(this.sortByTotalWageAsc_Click);
+            this.sortByTotalWageAsc.Click += new System.EventHandler(this.SortByTotalWageAsc_Click);
             this.sortByTotalWageAsc.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
             this.sortByTotalWageAsc.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
             this.sortByTotalWageAsc.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
@@ -286,7 +286,7 @@
             this.lblMinimize.Size = new System.Drawing.Size(19, 25);
             this.lblMinimize.TabIndex = 1;
             this.lblMinimize.Text = "-";
-            this.lblMinimize.Click += new System.EventHandler(this.lblMinimize_Click);
+            this.lblMinimize.Click += new System.EventHandler(this.LblMinimize_Click);
             this.lblMinimize.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
             this.lblMinimize.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
             this.lblMinimize.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
@@ -301,7 +301,7 @@
             this.lblClose.Size = new System.Drawing.Size(23, 25);
             this.lblClose.TabIndex = 0;
             this.lblClose.Text = "x";
-            this.lblClose.Click += new System.EventHandler(this.lblClose_Click);
+            this.lblClose.Click += new System.EventHandler(this.LblClose_Click);
             this.lblClose.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
             this.lblClose.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
             this.lblClose.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
@@ -335,7 +335,7 @@
             this.btnClose.TabIndex = 6;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             this.btnClose.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
             this.btnClose.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
             this.btnClose.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);

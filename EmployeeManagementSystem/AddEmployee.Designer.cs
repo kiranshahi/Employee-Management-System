@@ -168,7 +168,7 @@
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(280, 31);
             this.txtFullName.TabIndex = 42;
-            this.txtFullName.TextChanged += new System.EventHandler(this.txtFullName_TextChanged);
+            this.txtFullName.TextChanged += new System.EventHandler(this.TxtFullName_TextChanged);
             this.txtFullName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
             this.txtFullName.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
             this.txtFullName.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
@@ -333,7 +333,7 @@
             this.btnSave.TabIndex = 29;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             this.btnSave.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
             this.btnSave.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
             this.btnSave.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
@@ -355,7 +355,7 @@
             this.btnCancel.TabIndex = 28;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             this.btnCancel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
             this.btnCancel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
             this.btnCancel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
@@ -370,7 +370,7 @@
             this.lblClose.Size = new System.Drawing.Size(23, 25);
             this.lblClose.TabIndex = 50;
             this.lblClose.Text = "x";
-            this.lblClose.Click += new System.EventHandler(this.lblClose_Click);
+            this.lblClose.Click += new System.EventHandler(this.LblClose_Click);
             // 
             // AddEmployee
             // 

@@ -8,11 +8,11 @@ namespace EmployeeManagementSystem
     public partial class DisplayChart : Form
     {
         private bool _dragging = false;
-        private Point _start_point = new Point(0, 0);
+        private Point _start_point = new(0, 0);
 
 
-        List<string> departList = new List<string>();
-        List<int> totalWageList = new List<int>();
+        List<string> departList = new();
+        List<int> totalWageList = new();
 
         public DisplayChart(DataGridView dataGridView)
         {
@@ -57,19 +57,19 @@ namespace EmployeeManagementSystem
             }
         }
 
-        private void lblClose_Click(object sender, EventArgs e)
+        private void LblClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
-        private void lblMinimize_Click(object sender, EventArgs e)
+        private void LblMinimize_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Minimized;
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void BtnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void OnMouseDown(object sender, MouseEventArgs e)
@@ -83,7 +83,7 @@ namespace EmployeeManagementSystem
             if (_dragging)
             {
                 Point p = PointToScreen(e.Location);
-                Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
+                Location = new Point(p.X - _start_point.X, p.Y - _start_point.Y);
             }
         }
 
