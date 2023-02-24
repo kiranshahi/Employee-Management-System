@@ -120,7 +120,7 @@ namespace EmployeeManagementSystem
 
                 var addEmp = new AddEmployee();
                 addEmp.LoadData(id, name, address, contact, email, desigination, department, dateOfJoin, wageRate, hourWorked);
-                addEmp.IdentityUpdated += this.UpdateRecord;
+                addEmp.IdentityUpdated += UpdateRecord;
                 addEmp.ShowDialog();
             }
             catch (Exception exception)
