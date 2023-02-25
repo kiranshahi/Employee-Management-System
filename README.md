@@ -1,6 +1,6 @@
 # Employee Management System
 
-> Before running the application, don't forget change connection string at -> EmployeeManagementSystem.Data -> EmployeeManagementContext class in line 16.
+> Before running the application, don't forget to change connection string at -> EmployeeManagementSystem.Data -> EmployeeManagementContext class in line 16.
 
 ![Connection String](/Screenshots/connection.png "Connection String")
 
