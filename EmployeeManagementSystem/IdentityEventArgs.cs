@@ -9,22 +9,22 @@ namespace EmployeeManagementSystem
      *******/
     public class IdentityEventArgs : EventArgs
     {
-        public IdentityEventArgs(string id, string fullName, string address, string contact, string email,
+        public IdentityEventArgs(int id, string fullName, string address, string contact, string email,
             string designation, string department,string dateOfJoin, string wageRate, string workedHour)
         {
-            this.Id = id;
-            this.FullName = fullName;
-            this.Address = address;
-            this.Contact = contact;
-            this.Email = email;
-            this.Designation = designation;
-            this.Department = department;
-            this.DateOfJoin = dateOfJoin;
-            this.WageRate = wageRate;
-            this.WorkedHour = workedHour;
+            Id = id;
+            FullName = fullName;
+            Address = address;
+            Contact = contact;
+            Email = email;
+            Designation = designation;
+            Department = department;
+            DateOfJoin = dateOfJoin;
+            WageRate = wageRate;
+            WorkedHour = workedHour;
         }
 
-        public string Id { get; }
+        public int Id { get; }
         public string FullName { get; }
         public string Address { get; }
         public string Contact { get; }

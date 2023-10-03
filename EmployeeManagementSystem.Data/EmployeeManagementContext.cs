@@ -13,7 +13,7 @@ namespace EmployeeManagementSystem.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=kirans;Database=EmployeeManagement;Trusted_Connection=True;TrustServerCertificate=True;");            
+            optionsBuilder.UseSqlServer(@"Server=localhost;Database=EmployeeManagement;Trusted_Connection=True;TrustServerCertificate=True;");            
         }
     }
 }
