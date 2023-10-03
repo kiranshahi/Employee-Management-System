@@ -1,3 +1,13 @@
+### Hacktoberfest 2023 Update
+#### We are open for any kind of feature request and pull request [hacktoberfest 2023]
+Initially, this repository was created just to showcase the project that was completed in the first year of my undergraduate study. Eventually, this project started to gain the attention of the open-source community. Thanks to all the contributors to this project.
+
+As a part of an open-source community, I would like to invite contributions from all levels of contributors. Whether you are a beginner or have few years of experience we equally value your contributions.
+
+Simply create an issue and start to hit the code in your favourite IDE. Also don't forget to create a pull request.
+
+[How to contribute to this project.](https://github.com/kiranshahi/Employee-Management-System/blob/master/CONTRIBUTING.md "Contribution guidelines for Employee Management System")
+
 # Employee Management System
 
 > Before running the application, don't forget to change connection string at -> EmployeeManagementSystem.Data -> EmployeeManagementContext class in line 16.
