@@ -72,8 +72,9 @@
             // dateTimePicker
             // 
             dateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dateTimePicker.CustomFormat = "MM-dd-yyyy";
             dateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             dateTimePicker.Location = new System.Drawing.Point(43, 473);
             dateTimePicker.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             dateTimePicker.Name = "dateTimePicker";

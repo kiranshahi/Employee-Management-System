@@ -42,8 +42,7 @@ namespace EmployeeManagementSystem
         }
 
         //This method will set the values on controls received from the selected row.
-        public void LoadData(string id, string name, string address, string contact, string email, string desigination,
-           string department, string dateOfJoin, string wageRate, string workedHour)
+        public void LoadData(string id, string name, string address, string contact, string email, string desigination, string department, string dateOfJoin, string wageRate, string workedHour)
         {
             txtIdNo.Text = id;
             txtFullName.Text = name;
@@ -52,13 +51,14 @@ namespace EmployeeManagementSystem
             txtEmail.Text = email;
             txtDesignation.Text = desigination;
             comboBoxDepartment.Text = department;
-            dateTimePicker.Text = dateOfJoin;
+            string[] dateParts = dateOfJoin.Split('/');
+            dateTimePicker.Value = new DateTime(int.Parse(dateParts[2]), int.Parse(dateParts[0]), int.Parse(dateParts[1]));
             txtWage.Text = wageRate;
             txtWorkedHour.Text = workedHour;
         }
         private void BtnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void OnMouseDown(object sender, MouseEventArgs e)
@@ -86,31 +86,39 @@ namespace EmployeeManagementSystem
 
         private async void BtnSave_Click(object sender, EventArgs e)
         {
-            var id = int.TryParse(txtIdNo.Text, out int EmployeeNo);
-            var name = txtFullName.Text;
-            var address = txtAddress.Text;
-            var contactNo = txtContact.Text;
-            var email = txtEmail.Text;
-            var desigination = txtDesignation.Text;
-            var department = comboBoxDepartment.Text;
-            var dateOfJoin = dateTimePicker.Text;
-            var wageRate = txtWage.Text;
-            var hourWorked = txtWorkedHour.Text;
-
-            using (var context = new EmployeeManagementContext())
+            try
             {
-                var emp = new Employee(EmployeeNo, name, address, contactNo, email, desigination, department, dateOfJoin, wageRate, hourWorked);
-                context.Employees.Add(emp);
-                await context.SaveChangesAsync();
+
+                int EmployeeNo = int.Parse(txtIdNo.Text);
+                string name = txtFullName.Text;
+                string address = txtAddress.Text;
+                string contactNo = txtContact.Text;
+                string email = txtEmail.Text;
+                string desigination = txtDesignation.Text;
+                string department = comboBoxDepartment.Text;
+                string dateOfJoin = dateTimePicker.Value.ToString("MM-dd-yyyy");
+                string wageRate = txtWage.Text;
+                string hourWorked = txtWorkedHour.Text;
+
+                using (var context = new EmployeeManagementContext())
+                {
+                    var emp = new Employee(EmployeeNo, name, address, contactNo, email, desigination, department, dateOfJoin, wageRate, hourWorked);
+                    context.Employees.Add(emp);
+                    await context.SaveChangesAsync();
+                }
+
+                //instance event args and value has been passed 
+                var args = new IdentityEventArgs(EmployeeNo, name, address, contactNo, email, desigination, department, dateOfJoin, wageRate, hourWorked);
+
+                //Event has be raised with update arguments of delegate
+                IdentityUpdated?.Invoke(this, args);
+
+                Hide();
             }
-
-            //instance event args and value has been passed 
-            var args = new IdentityEventArgs(EmployeeNo, name, address, contactNo, email, desigination, department, dateOfJoin, wageRate, hourWorked);
-
-            //Event has be raised with update arguments of delegate
-            IdentityUpdated?.Invoke(this, args);
-
-            this.Hide();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Add Employee", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         //This method valid the textoBox full name, if you put a number it return an error
