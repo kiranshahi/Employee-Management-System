@@ -29,449 +29,456 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeSysMainForm));
-            this.sideBarPanel = new System.Windows.Forms.Panel();
-            this.btnGenerateReport = new System.Windows.Forms.Button();
-            this.payroll = new System.Windows.Forms.Button();
-            this.addEmployee = new System.Windows.Forms.Button();
-            this.logoPanel = new System.Windows.Forms.Panel();
-            this.picBoxLogo = new System.Windows.Forms.PictureBox();
-            this.lblLogo = new System.Windows.Forms.Label();
-            this.importEmployees = new System.Windows.Forms.Button();
-            this.exportData = new System.Windows.Forms.Button();
-            this.headerPanel = new System.Windows.Forms.Panel();
-            this.header = new System.Windows.Forms.Label();
-            this.lblMinimize = new System.Windows.Forms.Label();
-            this.lblClose = new System.Windows.Forms.Label();
-            this.containerPanel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Designation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Department = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateOfJoin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WageRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.workedHour = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.sideBarPanel.SuspendLayout();
-            this.logoPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).BeginInit();
-            this.headerPanel.SuspendLayout();
-            this.containerPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            this.SuspendLayout();
+            sideBarPanel = new System.Windows.Forms.Panel();
+            btnGenerateReport = new System.Windows.Forms.Button();
+            payroll = new System.Windows.Forms.Button();
+            addEmployee = new System.Windows.Forms.Button();
+            logoPanel = new System.Windows.Forms.Panel();
+            picBoxLogo = new System.Windows.Forms.PictureBox();
+            lblLogo = new System.Windows.Forms.Label();
+            importEmployees = new System.Windows.Forms.Button();
+            exportData = new System.Windows.Forms.Button();
+            headerPanel = new System.Windows.Forms.Panel();
+            header = new System.Windows.Forms.Label();
+            lblMinimize = new System.Windows.Forms.Label();
+            lblClose = new System.Windows.Forms.Label();
+            containerPanel = new System.Windows.Forms.Panel();
+            panel1 = new System.Windows.Forms.Panel();
+            dataGridView = new System.Windows.Forms.DataGridView();
+            Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Designation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Department = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dateOfJoin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            WageRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            workedHour = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            btnEdit = new System.Windows.Forms.Button();
+            btnDelete = new System.Windows.Forms.Button();
+            sideBarPanel.SuspendLayout();
+            logoPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picBoxLogo).BeginInit();
+            headerPanel.SuspendLayout();
+            containerPanel.SuspendLayout();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
+            SuspendLayout();
             // 
             // sideBarPanel
             // 
-            this.sideBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.sideBarPanel.Controls.Add(this.btnGenerateReport);
-            this.sideBarPanel.Controls.Add(this.payroll);
-            this.sideBarPanel.Controls.Add(this.addEmployee);
-            this.sideBarPanel.Controls.Add(this.logoPanel);
-            this.sideBarPanel.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.sideBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sideBarPanel.Location = new System.Drawing.Point(0, 0);
-            this.sideBarPanel.Name = "sideBarPanel";
-            this.sideBarPanel.Size = new System.Drawing.Size(176, 555);
-            this.sideBarPanel.TabIndex = 0;
-            this.sideBarPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
-            this.sideBarPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
-            this.sideBarPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
+            sideBarPanel.BackColor = System.Drawing.Color.FromArgb(41, 53, 65);
+            sideBarPanel.Controls.Add(btnGenerateReport);
+            sideBarPanel.Controls.Add(payroll);
+            sideBarPanel.Controls.Add(addEmployee);
+            sideBarPanel.Controls.Add(logoPanel);
+            sideBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            sideBarPanel.Location = new System.Drawing.Point(0, 0);
+            sideBarPanel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            sideBarPanel.Name = "sideBarPanel";
+            sideBarPanel.Size = new System.Drawing.Size(205, 640);
+            sideBarPanel.TabIndex = 0;
+            sideBarPanel.MouseDown += OnMouseDown;
+            sideBarPanel.MouseMove += OnMouseMove;
+            sideBarPanel.MouseUp += OnMouseUp;
             // 
             // btnGenerateReport
             // 
-            this.btnGenerateReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnGenerateReport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGenerateReport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
-            this.btnGenerateReport.FlatAppearance.BorderSize = 0;
-            this.btnGenerateReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerateReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerateReport.ForeColor = System.Drawing.Color.White;
-            this.btnGenerateReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGenerateReport.Location = new System.Drawing.Point(2, 151);
-            this.btnGenerateReport.Name = "btnGenerateReport";
-            this.btnGenerateReport.Size = new System.Drawing.Size(173, 40);
-            this.btnGenerateReport.TabIndex = 2;
-            this.btnGenerateReport.Text = "Generate Report";
-            this.btnGenerateReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGenerateReport.UseVisualStyleBackColor = true;
-            this.btnGenerateReport.Click += new System.EventHandler(this.BtnGenerateReport_Click);
+            btnGenerateReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            btnGenerateReport.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnGenerateReport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(31, 43, 55);
+            btnGenerateReport.FlatAppearance.BorderSize = 0;
+            btnGenerateReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnGenerateReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnGenerateReport.ForeColor = System.Drawing.Color.White;
+            btnGenerateReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnGenerateReport.Location = new System.Drawing.Point(2, 174);
+            btnGenerateReport.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnGenerateReport.Name = "btnGenerateReport";
+            btnGenerateReport.Size = new System.Drawing.Size(202, 46);
+            btnGenerateReport.TabIndex = 2;
+            btnGenerateReport.Text = "Generate Report";
+            btnGenerateReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnGenerateReport.UseVisualStyleBackColor = true;
+            btnGenerateReport.Click += BtnGenerateReport_Click;
             // 
             // payroll
             // 
-            this.payroll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.payroll.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.payroll.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
-            this.payroll.FlatAppearance.BorderSize = 0;
-            this.payroll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.payroll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.payroll.ForeColor = System.Drawing.Color.White;
-            this.payroll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.payroll.Location = new System.Drawing.Point(2, 105);
-            this.payroll.Name = "payroll";
-            this.payroll.Size = new System.Drawing.Size(173, 40);
-            this.payroll.TabIndex = 1;
-            this.payroll.Text = "Generate Payroll";
-            this.payroll.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.payroll.UseVisualStyleBackColor = true;
-            this.payroll.Click += new System.EventHandler(this.Payroll_Click);
+            payroll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            payroll.Cursor = System.Windows.Forms.Cursors.Hand;
+            payroll.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(31, 43, 55);
+            payroll.FlatAppearance.BorderSize = 0;
+            payroll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            payroll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            payroll.ForeColor = System.Drawing.Color.White;
+            payroll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            payroll.Location = new System.Drawing.Point(2, 121);
+            payroll.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            payroll.Name = "payroll";
+            payroll.Size = new System.Drawing.Size(202, 46);
+            payroll.TabIndex = 1;
+            payroll.Text = "Generate Payroll";
+            payroll.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            payroll.UseVisualStyleBackColor = true;
+            payroll.Click += Payroll_Click;
             // 
             // addEmployee
             // 
-            this.addEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.addEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addEmployee.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
-            this.addEmployee.FlatAppearance.BorderSize = 0;
-            this.addEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addEmployee.ForeColor = System.Drawing.Color.White;
-            this.addEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addEmployee.Location = new System.Drawing.Point(2, 59);
-            this.addEmployee.Name = "addEmployee";
-            this.addEmployee.Size = new System.Drawing.Size(173, 40);
-            this.addEmployee.TabIndex = 1;
-            this.addEmployee.Text = "Add Employee";
-            this.addEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addEmployee.UseVisualStyleBackColor = true;
-            this.addEmployee.Click += new System.EventHandler(this.AddEmployee_Click);
+            addEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            addEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
+            addEmployee.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(31, 43, 55);
+            addEmployee.FlatAppearance.BorderSize = 0;
+            addEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            addEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            addEmployee.ForeColor = System.Drawing.Color.White;
+            addEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            addEmployee.Location = new System.Drawing.Point(2, 68);
+            addEmployee.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            addEmployee.Name = "addEmployee";
+            addEmployee.Size = new System.Drawing.Size(202, 46);
+            addEmployee.TabIndex = 1;
+            addEmployee.Text = "Add Employee";
+            addEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            addEmployee.UseVisualStyleBackColor = true;
+            addEmployee.Click += AddEmployee_Click;
             // 
             // logoPanel
             // 
-            this.logoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(120)))), ((int)(((byte)(53)))));
-            this.logoPanel.Controls.Add(this.picBoxLogo);
-            this.logoPanel.Controls.Add(this.lblLogo);
-            this.logoPanel.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.logoPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.logoPanel.Location = new System.Drawing.Point(0, 0);
-            this.logoPanel.Name = "logoPanel";
-            this.logoPanel.Size = new System.Drawing.Size(176, 53);
-            this.logoPanel.TabIndex = 0;
-            this.logoPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
-            this.logoPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
-            this.logoPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
+            logoPanel.BackColor = System.Drawing.Color.FromArgb(222, 120, 53);
+            logoPanel.Controls.Add(picBoxLogo);
+            logoPanel.Controls.Add(lblLogo);
+            logoPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            logoPanel.Location = new System.Drawing.Point(0, 0);
+            logoPanel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            logoPanel.Name = "logoPanel";
+            logoPanel.Size = new System.Drawing.Size(205, 61);
+            logoPanel.TabIndex = 0;
+            logoPanel.MouseDown += OnMouseDown;
+            logoPanel.MouseMove += OnMouseMove;
+            logoPanel.MouseUp += OnMouseUp;
             // 
             // picBoxLogo
             // 
-            this.picBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("picBoxLogo.Image")));
-            this.picBoxLogo.Location = new System.Drawing.Point(3, 1);
-            this.picBoxLogo.Name = "picBoxLogo";
-            this.picBoxLogo.Size = new System.Drawing.Size(60, 50);
-            this.picBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBoxLogo.TabIndex = 1;
-            this.picBoxLogo.TabStop = false;
-            this.picBoxLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
-            this.picBoxLogo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
-            this.picBoxLogo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
+            picBoxLogo.Image = (System.Drawing.Image)resources.GetObject("picBoxLogo.Image");
+            picBoxLogo.Location = new System.Drawing.Point(4, 1);
+            picBoxLogo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            picBoxLogo.Name = "picBoxLogo";
+            picBoxLogo.Size = new System.Drawing.Size(70, 58);
+            picBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            picBoxLogo.TabIndex = 1;
+            picBoxLogo.TabStop = false;
+            picBoxLogo.MouseDown += OnMouseDown;
+            picBoxLogo.MouseMove += OnMouseMove;
+            picBoxLogo.MouseUp += OnMouseUp;
             // 
             // lblLogo
             // 
-            this.lblLogo.AutoSize = true;
-            this.lblLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogo.ForeColor = System.Drawing.Color.White;
-            this.lblLogo.Location = new System.Drawing.Point(67, 8);
-            this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(80, 33);
-            this.lblLogo.TabIndex = 0;
-            this.lblLogo.Text = "EMS";
-            this.lblLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
-            this.lblLogo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
-            this.lblLogo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
+            lblLogo.AutoSize = true;
+            lblLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            lblLogo.ForeColor = System.Drawing.Color.White;
+            lblLogo.Location = new System.Drawing.Point(78, 9);
+            lblLogo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblLogo.Name = "lblLogo";
+            lblLogo.Size = new System.Drawing.Size(80, 33);
+            lblLogo.TabIndex = 0;
+            lblLogo.Text = "EMS";
+            lblLogo.MouseDown += OnMouseDown;
+            lblLogo.MouseMove += OnMouseMove;
+            lblLogo.MouseUp += OnMouseUp;
             // 
             // importEmployees
             // 
-            this.importEmployees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(151)))), ((int)(((byte)(31)))));
-            this.importEmployees.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.importEmployees.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.importEmployees.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
-            this.importEmployees.FlatAppearance.BorderSize = 0;
-            this.importEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.importEmployees.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.importEmployees.ForeColor = System.Drawing.Color.White;
-            this.importEmployees.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.importEmployees.Location = new System.Drawing.Point(627, 453);
-            this.importEmployees.Name = "importEmployees";
-            this.importEmployees.Size = new System.Drawing.Size(134, 40);
-            this.importEmployees.TabIndex = 1;
-            this.importEmployees.Text = "Import Data";
-            this.importEmployees.UseVisualStyleBackColor = false;
-            this.importEmployees.Click += new System.EventHandler(this.ImportEmployees_Click);
-            this.importEmployees.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
-            this.importEmployees.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
-            this.importEmployees.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
+            importEmployees.BackColor = System.Drawing.Color.FromArgb(236, 151, 31);
+            importEmployees.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            importEmployees.Cursor = System.Windows.Forms.Cursors.Hand;
+            importEmployees.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(31, 43, 55);
+            importEmployees.FlatAppearance.BorderSize = 0;
+            importEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            importEmployees.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            importEmployees.ForeColor = System.Drawing.Color.White;
+            importEmployees.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            importEmployees.Location = new System.Drawing.Point(732, 523);
+            importEmployees.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            importEmployees.Name = "importEmployees";
+            importEmployees.Size = new System.Drawing.Size(156, 46);
+            importEmployees.TabIndex = 1;
+            importEmployees.Text = "Import Data";
+            importEmployees.UseVisualStyleBackColor = false;
+            importEmployees.Click += ImportEmployees_Click;
+            importEmployees.MouseDown += OnMouseDown;
+            importEmployees.MouseMove += OnMouseMove;
+            importEmployees.MouseUp += OnMouseUp;
             // 
             // exportData
             // 
-            this.exportData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(151)))), ((int)(((byte)(31)))));
-            this.exportData.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.exportData.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exportData.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
-            this.exportData.FlatAppearance.BorderSize = 0;
-            this.exportData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exportData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exportData.ForeColor = System.Drawing.Color.White;
-            this.exportData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.exportData.Location = new System.Drawing.Point(480, 453);
-            this.exportData.Name = "exportData";
-            this.exportData.Size = new System.Drawing.Size(134, 40);
-            this.exportData.TabIndex = 1;
-            this.exportData.Text = "Export Data";
-            this.exportData.UseVisualStyleBackColor = false;
-            this.exportData.Click += new System.EventHandler(this.ExportData_Click);
-            this.exportData.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
-            this.exportData.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
-            this.exportData.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
+            exportData.BackColor = System.Drawing.Color.FromArgb(31, 151, 31);
+            exportData.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            exportData.Cursor = System.Windows.Forms.Cursors.Hand;
+            exportData.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(31, 43, 55);
+            exportData.FlatAppearance.BorderSize = 0;
+            exportData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            exportData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            exportData.ForeColor = System.Drawing.Color.White;
+            exportData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            exportData.Location = new System.Drawing.Point(560, 523);
+            exportData.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            exportData.Name = "exportData";
+            exportData.Size = new System.Drawing.Size(156, 46);
+            exportData.TabIndex = 1;
+            exportData.Text = "Export Data";
+            exportData.UseVisualStyleBackColor = false;
+            exportData.Click += ExportData_Click;
+            exportData.MouseDown += OnMouseDown;
+            exportData.MouseMove += OnMouseMove;
+            exportData.MouseUp += OnMouseUp;
             // 
             // headerPanel
             // 
-            this.headerPanel.BackColor = System.Drawing.Color.White;
-            this.headerPanel.Controls.Add(this.header);
-            this.headerPanel.Controls.Add(this.lblMinimize);
-            this.headerPanel.Controls.Add(this.lblClose);
-            this.headerPanel.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.headerPanel.Location = new System.Drawing.Point(176, 0);
-            this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(1046, 53);
-            this.headerPanel.TabIndex = 1;
-            this.headerPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
-            this.headerPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
-            this.headerPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
+            headerPanel.BackColor = System.Drawing.Color.White;
+            headerPanel.Controls.Add(header);
+            headerPanel.Controls.Add(lblMinimize);
+            headerPanel.Controls.Add(lblClose);
+            headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            headerPanel.Location = new System.Drawing.Point(205, 0);
+            headerPanel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            headerPanel.Name = "headerPanel";
+            headerPanel.Size = new System.Drawing.Size(1221, 61);
+            headerPanel.TabIndex = 1;
+            headerPanel.MouseDown += OnMouseDown;
+            headerPanel.MouseMove += OnMouseMove;
+            headerPanel.MouseUp += OnMouseUp;
             // 
             // header
             // 
-            this.header.AutoSize = true;
-            this.header.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.header.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
-            this.header.Location = new System.Drawing.Point(229, 8);
-            this.header.Name = "header";
-            this.header.Size = new System.Drawing.Size(428, 33);
-            this.header.TabIndex = 2;
-            this.header.Text = "Employee Management System";
-            this.header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
-            this.header.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
-            this.header.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
+            header.AutoSize = true;
+            header.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            header.ForeColor = System.Drawing.Color.FromArgb(31, 43, 55);
+            header.Location = new System.Drawing.Point(267, 9);
+            header.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            header.Name = "header";
+            header.Size = new System.Drawing.Size(428, 33);
+            header.TabIndex = 2;
+            header.Text = "Employee Management System";
+            header.MouseDown += OnMouseDown;
+            header.MouseMove += OnMouseMove;
+            header.MouseUp += OnMouseUp;
             // 
             // lblMinimize
             // 
-            this.lblMinimize.AutoSize = true;
-            this.lblMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMinimize.Location = new System.Drawing.Point(995, 3);
-            this.lblMinimize.Name = "lblMinimize";
-            this.lblMinimize.Size = new System.Drawing.Size(19, 25);
-            this.lblMinimize.TabIndex = 1;
-            this.lblMinimize.Text = "-";
-            this.lblMinimize.Click += new System.EventHandler(this.LblMinimize_Click);
-            this.lblMinimize.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
-            this.lblMinimize.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
-            this.lblMinimize.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
+            lblMinimize.AutoSize = true;
+            lblMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            lblMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblMinimize.Location = new System.Drawing.Point(1161, 3);
+            lblMinimize.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblMinimize.Name = "lblMinimize";
+            lblMinimize.Size = new System.Drawing.Size(19, 25);
+            lblMinimize.TabIndex = 1;
+            lblMinimize.Text = "-";
+            lblMinimize.Click += LblMinimize_Click;
+            lblMinimize.MouseDown += OnMouseDown;
+            lblMinimize.MouseMove += OnMouseMove;
+            lblMinimize.MouseUp += OnMouseUp;
             // 
             // lblClose
             // 
-            this.lblClose.AutoSize = true;
-            this.lblClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClose.Location = new System.Drawing.Point(1018, 3);
-            this.lblClose.Name = "lblClose";
-            this.lblClose.Size = new System.Drawing.Size(23, 25);
-            this.lblClose.TabIndex = 0;
-            this.lblClose.Text = "x";
-            this.lblClose.Click += new System.EventHandler(this.LblClose_Click);
-            this.lblClose.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
-            this.lblClose.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
-            this.lblClose.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
+            lblClose.AutoSize = true;
+            lblClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            lblClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lblClose.Location = new System.Drawing.Point(1188, 3);
+            lblClose.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblClose.Name = "lblClose";
+            lblClose.Size = new System.Drawing.Size(23, 25);
+            lblClose.TabIndex = 0;
+            lblClose.Text = "x";
+            lblClose.Click += LblClose_Click;
+            lblClose.MouseDown += OnMouseDown;
+            lblClose.MouseMove += OnMouseMove;
+            lblClose.MouseUp += OnMouseUp;
             // 
             // containerPanel
             // 
-            this.containerPanel.Controls.Add(this.panel1);
-            this.containerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.containerPanel.Location = new System.Drawing.Point(176, 53);
-            this.containerPanel.Name = "containerPanel";
-            this.containerPanel.Size = new System.Drawing.Size(1046, 502);
-            this.containerPanel.TabIndex = 2;
+            containerPanel.Controls.Add(panel1);
+            containerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            containerPanel.Location = new System.Drawing.Point(205, 61);
+            containerPanel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            containerPanel.Name = "containerPanel";
+            containerPanel.Size = new System.Drawing.Size(1221, 579);
+            containerPanel.TabIndex = 2;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dataGridView);
-            this.panel1.Controls.Add(this.exportData);
-            this.panel1.Controls.Add(this.importEmployees);
-            this.panel1.Controls.Add(this.btnEdit);
-            this.panel1.Controls.Add(this.btnDelete);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1046, 502);
-            this.panel1.TabIndex = 0;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
-            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
+            panel1.Controls.Add(dataGridView);
+            panel1.Controls.Add(exportData);
+            panel1.Controls.Add(importEmployees);
+            panel1.Controls.Add(btnEdit);
+            panel1.Controls.Add(btnDelete);
+            panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            panel1.Location = new System.Drawing.Point(0, 0);
+            panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(1221, 579);
+            panel1.TabIndex = 0;
+            panel1.MouseDown += OnMouseDown;
+            panel1.MouseMove += OnMouseMove;
+            panel1.MouseUp += OnMouseUp;
             // 
             // dataGridView
             // 
-            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.dataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.FullName,
-            this.Address,
-            this.Contact,
-            this.Email,
-            this.Designation,
-            this.Department,
-            this.dateOfJoin,
-            this.WageRate,
-            this.workedHour});
-            this.dataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
-            this.dataGridView.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.dataGridView.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView.Size = new System.Drawing.Size(1046, 440);
-            this.dataGridView.TabIndex = 4;
-            this.dataGridView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
-            this.dataGridView.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
-            this.dataGridView.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
+            dataGridView.AllowUserToAddRows = false;
+            dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridView.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            dataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { Id, FullName, Address, Contact, Email, Designation, Department, dateOfJoin, WageRate, workedHour });
+            dataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
+            dataGridView.ImeMode = System.Windows.Forms.ImeMode.Off;
+            dataGridView.Location = new System.Drawing.Point(0, 0);
+            dataGridView.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            dataGridView.Name = "dataGridView";
+            dataGridView.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            dataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridView.RowHeadersVisible = false;
+            dataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            dataGridView.Size = new System.Drawing.Size(1220, 508);
+            dataGridView.TabIndex = 4;
+            dataGridView.MouseDown += OnMouseDown;
+            dataGridView.MouseMove += OnMouseMove;
+            dataGridView.MouseUp += OnMouseUp;
             // 
             // Id
             // 
-            this.Id.FillWeight = 30F;
-            this.Id.HeaderText = "ID";
-            this.Id.Name = "Id";
+            Id.FillWeight = 30F;
+            Id.HeaderText = "ID";
+            Id.Name = "Id";
             // 
             // FullName
             // 
-            this.FullName.FillWeight = 83.94669F;
-            this.FullName.HeaderText = "Name";
-            this.FullName.Name = "FullName";
+            FullName.FillWeight = 83.94669F;
+            FullName.HeaderText = "Name";
+            FullName.Name = "FullName";
             // 
             // Address
             // 
-            this.Address.FillWeight = 83.94669F;
-            this.Address.HeaderText = "Address";
-            this.Address.Name = "Address";
+            Address.FillWeight = 83.94669F;
+            Address.HeaderText = "Address";
+            Address.Name = "Address";
             // 
             // Contact
             // 
-            this.Contact.FillWeight = 83.94669F;
-            this.Contact.HeaderText = "Contact";
-            this.Contact.Name = "Contact";
+            Contact.FillWeight = 83.94669F;
+            Contact.HeaderText = "Contact";
+            Contact.Name = "Contact";
             // 
             // Email
             // 
-            this.Email.FillWeight = 83.94669F;
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
+            Email.FillWeight = 83.94669F;
+            Email.HeaderText = "Email";
+            Email.Name = "Email";
             // 
             // Designation
             // 
-            this.Designation.FillWeight = 83.94669F;
-            this.Designation.HeaderText = "Designation";
-            this.Designation.Name = "Designation";
+            Designation.FillWeight = 83.94669F;
+            Designation.HeaderText = "Designation";
+            Designation.Name = "Designation";
             // 
             // Department
             // 
-            this.Department.FillWeight = 83.94669F;
-            this.Department.HeaderText = "Department";
-            this.Department.Name = "Department";
+            Department.FillWeight = 83.94669F;
+            Department.HeaderText = "Department";
+            Department.Name = "Department";
             // 
             // dateOfJoin
             // 
-            this.dateOfJoin.HeaderText = "Date Of Join";
-            this.dateOfJoin.Name = "dateOfJoin";
+            dateOfJoin.HeaderText = "Date Of Join";
+            dateOfJoin.Name = "dateOfJoin";
             // 
             // WageRate
             // 
-            this.WageRate.FillWeight = 83.94669F;
-            this.WageRate.HeaderText = "Wage Rate";
-            this.WageRate.Name = "WageRate";
+            WageRate.FillWeight = 83.94669F;
+            WageRate.HeaderText = "Wage Rate";
+            WageRate.Name = "WageRate";
             // 
             // workedHour
             // 
-            this.workedHour.HeaderText = "WorkedHour";
-            this.workedHour.Name = "workedHour";
+            workedHour.HeaderText = "WorkedHour";
+            workedHour.Name = "workedHour";
             // 
             // btnEdit
             // 
-            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(151)))), ((int)(((byte)(31)))));
-            this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
-            this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(773, 453);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(120, 40);
-            this.btnEdit.TabIndex = 6;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
-            this.btnEdit.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
-            this.btnEdit.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
-            this.btnEdit.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
+            btnEdit.BackColor = System.Drawing.Color.FromArgb(236, 151, 31);
+            btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(31, 43, 55);
+            btnEdit.FlatAppearance.BorderSize = 0;
+            btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnEdit.ForeColor = System.Drawing.Color.White;
+            btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnEdit.Location = new System.Drawing.Point(902, 523);
+            btnEdit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new System.Drawing.Size(140, 46);
+            btnEdit.TabIndex = 6;
+            btnEdit.Text = "Edit";
+            btnEdit.UseVisualStyleBackColor = false;
+            btnEdit.Click += BtnEdit_Click;
+            btnEdit.MouseDown += OnMouseDown;
+            btnEdit.MouseMove += OnMouseMove;
+            btnEdit.MouseUp += OnMouseUp;
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(48)))), ((int)(((byte)(44)))));
-            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(906, 453);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(120, 40);
-            this.btnDelete.TabIndex = 5;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
-            this.btnDelete.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
-            this.btnDelete.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
-            this.btnDelete.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
+            btnDelete.BackColor = System.Drawing.Color.FromArgb(201, 48, 44);
+            btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(31, 43, 55);
+            btnDelete.FlatAppearance.BorderSize = 0;
+            btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnDelete.ForeColor = System.Drawing.Color.White;
+            btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnDelete.Location = new System.Drawing.Point(1057, 523);
+            btnDelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new System.Drawing.Size(140, 46);
+            btnDelete.TabIndex = 5;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += BtnDelete_Click;
+            btnDelete.MouseDown += OnMouseDown;
+            btnDelete.MouseMove += OnMouseMove;
+            btnDelete.MouseUp += OnMouseUp;
             // 
             // EmployeeSysMainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1222, 555);
-            this.Controls.Add(this.containerPanel);
-            this.Controls.Add(this.headerPanel);
-            this.Controls.Add(this.sideBarPanel);
-            this.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "EmployeeSysMainForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Employee Management System";
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnMouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnMouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnMouseUp);
-            this.sideBarPanel.ResumeLayout(false);
-            this.logoPanel.ResumeLayout(false);
-            this.logoPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).EndInit();
-            this.headerPanel.ResumeLayout(false);
-            this.headerPanel.PerformLayout();
-            this.containerPanel.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.Silver;
+            ClientSize = new System.Drawing.Size(1426, 640);
+            Controls.Add(containerPanel);
+            Controls.Add(headerPanel);
+            Controls.Add(sideBarPanel);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Name = "EmployeeSysMainForm";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Employee Management System";
+            MouseDown += OnMouseDown;
+            MouseMove += OnMouseMove;
+            MouseUp += OnMouseUp;
+            sideBarPanel.ResumeLayout(false);
+            logoPanel.ResumeLayout(false);
+            logoPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picBoxLogo).EndInit();
+            headerPanel.ResumeLayout(false);
+            headerPanel.PerformLayout();
+            containerPanel.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
