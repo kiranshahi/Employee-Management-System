@@ -6,6 +6,8 @@ As a part of an open-source community, I would like to invite contributions from
 
 Simply create an issue and start to hit the code in your favourite IDE. Also don't forget to create a pull request.
 
+[How to run to this project.](https://github.com/kiranshahi/Employee-Management-System/blob/master/HOW_TO_RUN.md "Guidelines for running Employee Management System")
+
 [How to contribute to this project.](https://github.com/kiranshahi/Employee-Management-System/blob/master/CONTRIBUTING.md "Contribution guidelines for Employee Management System")
 
 # Employee Management System
