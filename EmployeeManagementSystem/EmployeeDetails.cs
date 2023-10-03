@@ -61,7 +61,7 @@ namespace EmployeeManagementSystem
 
         private void AddEmployee_Click(object sender, EventArgs e)
         {
-            var addEmp = new AddEmployee();
+            var addEmp = new AddEmployee(GetHighestEmployeeID() + 1);
             addEmp.IdentityUpdated += SaveRecord;
             addEmp.ShowDialog();
         }
@@ -118,7 +118,7 @@ namespace EmployeeManagementSystem
                 var hourWorked = Convert.ToString(dataGridView.Rows[row].Cells[9].Value);
 
 
-                var addEmp = new AddEmployee();
+                var addEmp = new AddEmployee(0);
                 addEmp.LoadData(id, name, address, contact, email, desigination, department, dateOfJoin, wageRate, hourWorked);
                 addEmp.IdentityUpdated += UpdateRecord;
                 addEmp.ShowDialog();
@@ -262,7 +262,8 @@ namespace EmployeeManagementSystem
             {
                 using var context = new EmployeeManagementContext();
                 dataGridView.Rows.Add(value[0], value[1], value[2], value[3], value[4], value[5], value[6], value[7], value[8], value[9]);
-                var emp = new Employee(value[0], value[1], value[2], value[3], value[4], value[5], value[6], value[7], value[8], value[9]);
+                bool isParsable = int.TryParse(value[0], out int employeeNo);
+                var emp = new Employee(isParsable ? employeeNo : 0, value[1], value[2], value[3], value[4], value[5], value[6], value[7], value[8], value[9]);
                 context.Employees.Add(emp);
                 try
                 {
@@ -309,6 +310,19 @@ namespace EmployeeManagementSystem
                     dataGridView.Rows.Add(emp.EmployeeID, emp.FullName, emp.Address, emp.Contact, emp.Email, emp.Designation, emp.Department, emp.DateOfJoin, emp.WageRate, emp.WorkedHour);
                 }
             }
+        }
+        public int GetHighestEmployeeID()
+        {
+            int highestEmployeeID = 0;
+            foreach (DataGridViewRow item in dataGridView.Rows)
+            {
+                bool isParsable = int.TryParse(Convert.ToString(item.Cells[0].Value), out int employeeID);
+                if (isParsable)
+                {
+                    highestEmployeeID = employeeID > highestEmployeeID ? employeeID : highestEmployeeID;
+                }
+            }
+            return highestEmployeeID;
         }
     }
 }

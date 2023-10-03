@@ -22,11 +22,11 @@ namespace EmployeeManagementSystem
         //Delegate has been added
         public delegate void IdentityHandler(object sender, IdentityEventArgs e);
 
-        
+
         //Event of the delegate type has been added. i.e. Object of delegate created
         public event IdentityHandler IdentityUpdated;
 
-        public AddEmployee()
+        public AddEmployee(int nextEmployeID)
         {
             InitializeComponent();
             comboBoxDepartment.Items.Add("Administrative");
@@ -35,6 +35,10 @@ namespace EmployeeManagementSystem
             comboBoxDepartment.Items.Add("Marketing");
             comboBoxDepartment.Items.Add("IT");
             comboBoxDepartment.SelectedIndex = 0;
+            if (nextEmployeID != 0)
+            {
+                txtIdNo.Text = nextEmployeID.ToString();
+            }
         }
 
         //This method will set the values on controls received from the selected row.
@@ -82,7 +86,7 @@ namespace EmployeeManagementSystem
 
         private async void BtnSave_Click(object sender, EventArgs e)
         {
-            var id = txtIdNo.Text;
+            var id = int.TryParse(txtIdNo.Text, out int EmployeeNo);
             var name = txtFullName.Text;
             var address = txtAddress.Text;
             var contactNo = txtContact.Text;
@@ -95,13 +99,13 @@ namespace EmployeeManagementSystem
 
             using (var context = new EmployeeManagementContext())
             {
-                var emp = new Employee(id, name, address, contactNo, email, desigination, department, dateOfJoin, wageRate, hourWorked);
+                var emp = new Employee(EmployeeNo, name, address, contactNo, email, desigination, department, dateOfJoin, wageRate, hourWorked);
                 context.Employees.Add(emp);
                 await context.SaveChangesAsync();
             }
 
             //instance event args and value has been passed 
-            var args = new IdentityEventArgs(id, name, address, contactNo, email, desigination, department, dateOfJoin, wageRate, hourWorked);
+            var args = new IdentityEventArgs(EmployeeNo, name, address, contactNo, email, desigination, department, dateOfJoin, wageRate, hourWorked);
 
             //Event has be raised with update arguments of delegate
             IdentityUpdated?.Invoke(this, args);

@@ -10,25 +10,25 @@ namespace EmployeeManagementSystem.Data
         {
         }
 
-        public Employee(string id, string fullName, string address, string contact, string email, string designation, string department, string dateOfJoin,
+        public Employee(int id, string fullName, string address, string contact, string email, string designation, string department, string dateOfJoin,
             string wageRate, string workedHour)
         {
-            this.EmployeeID = id;
-            this.FullName = fullName;
-            this.Address = address;
-            this.Contact = contact;
-            this.Email = email;
-            this.Designation = designation;
-            this.Department = department;
-            this.DateOfJoin = string.IsNullOrEmpty(dateOfJoin) ? DateTime.Now.ToShortDateString() : dateOfJoin;
-            this.WageRate = wageRate;
-            this.WorkedHour = workedHour;
+            EmployeeID = id;
+            FullName = fullName;
+            Address = address;
+            Contact = contact;
+            Email = email;
+            Designation = designation;
+            Department = department;
+            DateOfJoin = string.IsNullOrEmpty(dateOfJoin) ? DateTime.Now.ToShortDateString() : dateOfJoin;
+            WageRate = wageRate;
+            WorkedHour = workedHour;
         }
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
-        public string EmployeeID { get; set; }
+        public int EmployeeID { get; set; }
         public string FullName { get; set; }
         public string Address { get; set; }
         public string Contact { get; set; }
